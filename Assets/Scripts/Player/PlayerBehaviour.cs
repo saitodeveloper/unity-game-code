@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    public float speed = 5;
+    public float speed = 8;
     public float sprintMultiplier = 2;
-    public Animator anim;
     public Vector3 target;
-    public bool forceStop = false;
     private string[] _rightMovement = { "N", "NE", "S", "SE", "E" };
-    private bool _isAccelerated = false;
-    private bool _isAttacking = false;
-    private bool _isMoving = false;
     private GameObject _targetGameObject = null;
+    private Rigidbody2D _rb;
+    private Animator _anim;
+    private PlayerStateController _playerStateController = new PlayerStateController();
+
+    private void Awake()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -31,23 +35,18 @@ public class PlayerBehaviour : MonoBehaviour
             float distanceToEdge = Vector3.Distance(
                 transform.position, _targetGameObject.transform.position
             ) - enemyRadius;
-            forceStop = distanceToEdge <= 2f;
+            _playerStateController.ForceStop = distanceToEdge <= 3f;
         }
         else
         {
-            forceStop = false;
+            _playerStateController.ForceStop = false;
         }
 
-        _isAccelerated = Input.GetAxis("Fire3") > 0;
-        _isMoving = transform.position != target && !forceStop;
-
-        var totalSpeed = (_isAccelerated ? sprintMultiplier : 1) * speed;
-
-        if (_isMoving)
-            transform.position = Vector3.MoveTowards(transform.position, target, totalSpeed * Time.deltaTime);
+        _playerStateController.IsAccelerating = Input.GetAxis("Fire3") > 0;
+        _playerStateController.IsMoving = transform.position != target && !_playerStateController.ForceStop;
 
         Vector3 scale = transform.localScale;
-        string direction = WalkingDirection(transform.position, target);
+        string direction = CompassIndicator.WalkingDirection(transform.position, target);
         bool toFaceRight = _rightMovement.Contains(direction);
 
         if (toFaceRight)
@@ -61,20 +60,30 @@ public class PlayerBehaviour : MonoBehaviour
 
         transform.localScale = scale;
 
-        if (_isMoving)
+        if (_playerStateController.IsMoving)
         {
-            anim.SetBool("isWalking", !_isAccelerated);
-            anim.SetBool("isRunning", _isAccelerated);
-            anim.SetBool("isAttacking", false);
+            _anim.SetBool("isWalking", !_playerStateController.IsAccelerating);
+            _anim.SetBool("isRunning", _playerStateController.IsAccelerating);
+            _anim.SetBool("isAttacking", false);
         }
         else
         {
-            anim.SetBool("isWalking", false);
-            anim.SetBool("isRunning", false);
-            anim.SetBool("isAttacking", _isAttacking);
+            _anim.SetBool("isWalking", false);
+            _anim.SetBool("isRunning", false);
+            _anim.SetBool("isAttacking", _playerStateController.IsAttacking);
         }
+    }
 
-                  
+    void FixedUpdate()
+    {
+        var totalSpeed = (_playerStateController.IsAccelerating ? sprintMultiplier : 1) * speed;
+
+        if (_playerStateController.IsMoving)
+        {
+            transform.position = Vector3.MoveTowards(
+                transform.position, target, totalSpeed * Time.deltaTime
+            );
+        }
     }
 
     void CheckForEnemyClick()
@@ -82,28 +91,19 @@ public class PlayerBehaviour : MonoBehaviour
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
-        _isAttacking = hit.collider != null && hit.collider.gameObject != null;
+        _playerStateController.IsAttacking = hit.collider != null && hit.collider.gameObject != null;
         _targetGameObject = hit.collider?.gameObject;
     }
 
-    public string WalkingDirection(Vector3 currentPossition, Vector3 movingTo)
+    // Called when the object hits something solid (not trigger)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (currentPossition.x == movingTo.x)
-        {
-            if (currentPossition.y == movingTo.y) return "STOP";
-            else if (currentPossition.y < movingTo.y) return "N";
-            else return "S";
-        }
-        else if (currentPossition.x > movingTo.x)
-        {
-            if (currentPossition.y == movingTo.y) return "W";
-            else if (currentPossition.y < movingTo.y) return "NW";
-            else return "SW";
-        }
+        _playerStateController.HasCollided = true;
+    }
 
-        if (currentPossition.y == movingTo.y) return "E";
-        else if (currentPossition.y < movingTo.y) return "NE";
-        else if (currentPossition.y > movingTo.y) return "SE";
-        else return "SE";
+    // Optional: reset flag when player leaves collision
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        _playerStateController.HasCollided = false;
     }
 }
