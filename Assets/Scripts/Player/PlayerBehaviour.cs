@@ -43,7 +43,9 @@ public class PlayerBehaviour : MonoBehaviour
         }
 
         _playerStateController.IsAccelerating = Input.GetAxis("Fire3") > 0;
-        _playerStateController.IsMoving = transform.position != target && !_playerStateController.ForceStop;
+        _playerStateController.IsMoving =
+            transform.position != target &&
+            !_playerStateController.ForceStop;
 
         Vector3 scale = transform.localScale;
         string direction = CompassIndicator.WalkingDirection(transform.position, target);
@@ -93,17 +95,5 @@ public class PlayerBehaviour : MonoBehaviour
 
         _playerStateController.IsAttacking = hit.collider != null && hit.collider.gameObject != null;
         _targetGameObject = hit.collider?.gameObject;
-    }
-
-    // Called when the object hits something solid (not trigger)
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        _playerStateController.HasCollided = true;
-    }
-
-    // Optional: reset flag when player leaves collision
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        _playerStateController.HasCollided = false;
     }
 }
