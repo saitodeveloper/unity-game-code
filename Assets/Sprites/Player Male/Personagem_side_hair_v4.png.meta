@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 2eee86d8c8a994c4a96a0ca135660c4e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6143956476341050837
+    second: Personagem_side_hair_v4_0
+  - first:
+      213: -1521194288768808573
+    second: Personagem_side_hair_v4_1
+  - first:
+      213: 6435464221074641539
+    second: Personagem_side_hair_v4_2
+  - first:
+      213: -6079385044293213470
+    second: Personagem_side_hair_v4_3
+  - first:
+      213: -6950724352211614104
+    second: Personagem_side_hair_v4_4
+  - first:
+      213: -74721651720934200
+    second: Personagem_side_hair_v4_5
+  - first:
+      213: 8413247174858830324
+    second: Personagem_side_hair_v4_6
+  - first:
+      213: -812067728061411461
+    second: Personagem_side_hair_v4_7
+  - first:
+      213: -4170362854649620992
+    second: Personagem_side_hair_v4_8
+  - first:
+      213: 887725829436538587
+    second: Personagem_side_hair_v4_9
+  - first:
+      213: 6745148713876931111
+    second: Personagem_side_hair_v4_10
+  - first:
+      213: -4504185073854297658
+    second: Personagem_side_hair_v4_11
+  - first:
+      213: -3268247861845781273
+    second: Personagem_side_hair_v4_12
+  - first:
+      213: -9155893888819289161
+    second: Personagem_side_hair_v4_13
+  - first:
+      213: 2984203941548168266
+    second: Personagem_side_hair_v4_14
+  - first:
+      213: 8019825650211700600
+    second: Personagem_side_hair_v4_15
+  - first:
+      213: -2256934070356269764
+    second: Personagem_side_hair_v4_16
+  - first:
+      213: 5366742013536809750
+    second: Personagem_side_hair_v4_17
+  - first:
+      213: 2040204813741724923
+    second: Personagem_side_hair_v4_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 747
+        width: 430
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b222b3803284cbaa0800000000000000
+      internalID: -6143956476341050837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_1
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 697
+        width: 355
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389059f9ad1a3eae0800000000000000
+      internalID: -1521194288768808573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_2
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 675
+        width: 346
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 382d3edcc9c5f4950800000000000000
+      internalID: 6435464221074641539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_3
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 787
+        width: 139
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e2a41e138fa1aba0800000000000000
+      internalID: -6079385044293213470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_4
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 755
+        width: 367
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86605c637011a8f90800000000000000
+      internalID: -6950724352211614104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 426
+        width: 379
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cca42cbd0986fef0800000000000000
+      internalID: -74721651720934200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 552
+        width: 174
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f1f401fabbd1c470800000000000000
+      internalID: 8413247174858830324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_7
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 545
+        width: 185
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f475f24b4fab4f0800000000000000
+      internalID: -812067728061411461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_8
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 351
+        width: 366
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00610284415ef16c0800000000000000
+      internalID: -4170362854649620992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_9
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 428
+        width: 367
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdef08140f5d15c00800000000000000
+      internalID: 887725829436538587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 392
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72241d794059b9d50800000000000000
+      internalID: 6745148713876931111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_11
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 2
+        width: 333
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c94c4e1a8bed71c0800000000000000
+      internalID: -4504185073854297658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_12
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 11
+        width: 318
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e490c4b2e9d4a2d0800000000000000
+      internalID: -3268247861845781273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_13
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 9
+        width: 367
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3a1c3a40bbfe080800000000000000
+      internalID: -9155893888819289161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_14
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 293
+        width: 149
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a449c418ca50a6920800000000000000
+      internalID: 2984203941548168266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_15
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 299
+        width: 149
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87f3f6120f42c4f60800000000000000
+      internalID: 8019825650211700600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_16
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 146
+        width: 149
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3520f6bb62cda0e0800000000000000
+      internalID: -2256934070356269764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_17
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 145
+        width: 149
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 613b6065d6f7a7a40800000000000000
+      internalID: 5366742013536809750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem_side_hair_v4_18
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 5
+        width: 149
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf41e18f773405c10800000000000000
+      internalID: 2040204813741724923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Personagem_side_hair_v4_0: -6143956476341050837
+      Personagem_side_hair_v4_1: -1521194288768808573
+      Personagem_side_hair_v4_10: 6745148713876931111
+      Personagem_side_hair_v4_11: -4504185073854297658
+      Personagem_side_hair_v4_12: -3268247861845781273
+      Personagem_side_hair_v4_13: -9155893888819289161
+      Personagem_side_hair_v4_14: 2984203941548168266
+      Personagem_side_hair_v4_15: 8019825650211700600
+      Personagem_side_hair_v4_16: -2256934070356269764
+      Personagem_side_hair_v4_17: 5366742013536809750
+      Personagem_side_hair_v4_18: 2040204813741724923
+      Personagem_side_hair_v4_2: 6435464221074641539
+      Personagem_side_hair_v4_3: -6079385044293213470
+      Personagem_side_hair_v4_4: -6950724352211614104
+      Personagem_side_hair_v4_5: -74721651720934200
+      Personagem_side_hair_v4_6: 8413247174858830324
+      Personagem_side_hair_v4_7: -812067728061411461
+      Personagem_side_hair_v4_8: -4170362854649620992
+      Personagem_side_hair_v4_9: 887725829436538587
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

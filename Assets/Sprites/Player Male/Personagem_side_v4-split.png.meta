@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: c7fc185c75f151042997734b4ec41673
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5364231537217277328
+    second: Personagem_side_v4-split_0
+  - first:
+      213: -7537990289275609189
+    second: Personagem_side_v4-split_1
+  - first:
+      213: 631792942847576314
+    second: Personagem_side_v4-split_2
+  - first:
+      213: -4223864083038395692
+    second: Personagem_side_v4-split_3
+  - first:
+      213: -4829545221601757267
+    second: Personagem_side_v4-split_4
+  - first:
+      213: -7742079636387049294
+    second: Personagem_side_v4-split_5
+  - first:
+      213: -3750250425171411853
+    second: Personagem_side_v4-split_6
+  - first:
+      213: -5038477406879208708
+    second: Personagem_side_v4-split_7
+  - first:
+      213: -5258835272661620025
+    second: Personagem_side_v4-split_8
+  - first:
+      213: -6461895713462050257
+    second: Personagem_side_v4-split_9
+  - first:
+      213: -1716348668316129766
+    second: Personagem_side_v4-split_10
+  - first:
+      213: -6076597429031477258
+    second: Personagem_side_v4-split_11
+  - first:
+      213: 4409254449341427860
+    second: Personagem_side_v4-split_12
+  - first:
+      213: -455473776983697207
+    second: Personagem_side_v4-split_13
+  - first:
+      213: -2676924099398544116
+    second: Personagem_side_v4-split_14
+  - first:
+      213: 8404751938855616822
+    second: Personagem_side_v4-split_15
+  - first:
+      213: -9030659435179777187
+    second: Personagem_side_v4-split_16
+  - first:
+      213: -3777415335811250129
+    second: Personagem_side_v4-split_17
+  - first:
+      213: -4835049983839531324
+    second: Personagem_side_v4-split_18
+  - first:
+      213: -7960267514205205999
+    second: Personagem_side_v4-split_19
+  - first:
+      213: -145897132891176004
+    second: Personagem_side_v4-split_20
+  - first:
+      213: 5992316600673141987
+    second: Personagem_side_v4-split_21
+  - first:
+      213: -1037046826450919788
+    second: Personagem_side_v4-split_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Eye Black
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 739
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d88c48924917a40800000000000000
+      internalID: 5364231537217277328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye Black R
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 738
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f126715cda36790800000000000000
+      internalID: -7537990289275609189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyebrow
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 771
+        width: 47
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8470a855494c800800000000000000
+      internalID: 631792942847576314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 521
+        width: 281
+        height: 283
+      alignment: 9
+      pivot: {x: 0.49044615, y: 0.061246514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d227f6def1d165c0800000000000000
+      internalID: -4223864083038395692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye Blue
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 680
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7fdbf75320afcb0800000000000000
+      internalID: -4829545221601757267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye Green
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 680
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b05d5a079b9e8490800000000000000
+      internalID: -7742079636387049294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth Happy Natural
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 730
+        width: 67
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c76e4ab1f64fbc0800000000000000
+      internalID: -3750250425171411853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth Open 1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 690
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa22225e7bb31ab0800000000000000
+      internalID: -5038477406879208708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye Brown
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 619
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7caa5b89e2dd407b0800000000000000
+      internalID: -5258835272661620025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye Red
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 619
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22a97fc51cb256a0800000000000000
+      internalID: -6461895713462050257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth Open 2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 620
+        width: 59
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a166d42dafd4e28e0800000000000000
+      internalID: -1716348668316129766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye Yellow
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 558
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ffd68f55d69baba0800000000000000
+      internalID: -6076597429031477258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye Purple
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 556
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4907e497f81d03d30800000000000000
+      internalID: 4409254449341427860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye Blink
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 522
+        width: 57
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c891665305dda9f0800000000000000
+      internalID: -455473776983697207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye Pain
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 523
+        width: 43
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c05daace6b7a9dad0800000000000000
+      internalID: -2676924099398544116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shoulder R
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 412
+        width: 70
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631c3ccab5da3a470800000000000000
+      internalID: 8404751938855616822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torso
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 179
+        width: 154
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5364961717aca280800000000000000
+      internalID: -9030659435179777187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shoulder L
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 401
+        width: 70
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f288bd304cce39bc0800000000000000
+      internalID: -3777415335811250129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair Black 1
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 162
+        width: 356
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce8cf928a376ecb0800000000000000
+      internalID: -4835049983839531324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arm L
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 244
+        width: 47
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5142804, y: 0.8789631}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11a87b20fd2778190800000000000000
+      internalID: -7960267514205205999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arm R
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 220
+        width: 47
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5428415, y: 0.88352895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb30644a45ba9fdf0800000000000000
+      internalID: -145897132891176004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leg L
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 21
+        width: 75
+        height: 135
+      alignment: 9
+      pivot: {x: 0.70582694, y: 0.9176197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e48ccc133cf82350800000000000000
+      internalID: 5992316600673141987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leg R
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 0
+        width: 47
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.8926603}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49e52f5e76bab91f0800000000000000
+      internalID: -1037046826450919788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 623f48679c57f464a8311e0b67fc7afd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Arm L: -7960267514205205999
+      Arm R: -145897132891176004
+      Eye Black: 5364231537217277328
+      Eye Black R: -7537990289275609189
+      Eye Blink: -455473776983697207
+      Eye Blue: -4829545221601757267
+      Eye Brown: -5258835272661620025
+      Eye Green: -7742079636387049294
+      Eye Pain: -2676924099398544116
+      Eye Purple: 4409254449341427860
+      Eye Red: -6461895713462050257
+      Eye Yellow: -6076597429031477258
+      Eyebrow: 631792942847576314
+      Face: -4223864083038395692
+      Hair Black 1: -4835049983839531324
+      Leg L: 5992316600673141987
+      Leg R: -1037046826450919788
+      Mouth Happy Natural: -3750250425171411853
+      Mouth Open 1: -5038477406879208708
+      Mouth Open 2: -1716348668316129766
+      Shoulder L: -3777415335811250129
+      Shoulder R: 8404751938855616822
+      Torso: -9030659435179777187
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

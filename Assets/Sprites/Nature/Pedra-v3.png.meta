@@ -1,0 +1,1235 @@
+fileFormatVersion: 2
+guid: 56c5504b2ad636e4081f48bdf02f900a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3768260186656320470
+    second: Pedra-v3_0
+  - first:
+      213: 4947980335599308993
+    second: Pedra-v3_1
+  - first:
+      213: 4138427450879346870
+    second: Pedra-v3_2
+  - first:
+      213: -5455840795335702235
+    second: Pedra-v3_3
+  - first:
+      213: -3745615681063996071
+    second: Pedra-v3_4
+  - first:
+      213: -2669811066891957982
+    second: Pedra-v3_5
+  - first:
+      213: -6013807081675784067
+    second: Pedra-v3_6
+  - first:
+      213: 7550138155676893838
+    second: Pedra-v3_7
+  - first:
+      213: 2917358440541684066
+    second: Pedra-v3_8
+  - first:
+      213: -5666182003675969098
+    second: Pedra-v3_9
+  - first:
+      213: -7273655631108275923
+    second: Pedra-v3_10
+  - first:
+      213: 6682745622032642109
+    second: Pedra-v3_11
+  - first:
+      213: 6108706554573544376
+    second: Pedra-v3_12
+  - first:
+      213: -3986155484919496149
+    second: Pedra-v3_13
+  - first:
+      213: -7928330851655246755
+    second: Pedra-v3_14
+  - first:
+      213: -2878099899889922593
+    second: Pedra-v3_15
+  - first:
+      213: -3848408311049653761
+    second: Pedra-v3_16
+  - first:
+      213: -2773229005825565114
+    second: Pedra-v3_17
+  - first:
+      213: 8327222476891993607
+    second: Pedra-v3_18
+  - first:
+      213: -6204644339157896378
+    second: Pedra-v3_19
+  - first:
+      213: -6423054876875323173
+    second: Pedra-v3_20
+  - first:
+      213: -7592399735998924234
+    second: Pedra-v3_21
+  - first:
+      213: 4765812076699705850
+    second: Pedra-v3_22
+  - first:
+      213: -764584109352251925
+    second: Pedra-v3_23
+  - first:
+      213: 2598694921663086212
+    second: Pedra-v3_24
+  - first:
+      213: -8091146213612279647
+    second: Pedra-v3_25
+  - first:
+      213: 8631509295827076479
+    second: Pedra-v3_26
+  - first:
+      213: -7342796910229016516
+    second: Pedra-v3_27
+  - first:
+      213: -896939729935949204
+    second: Pedra-v3_28
+  - first:
+      213: 5987371398731373692
+    second: Pedra-v3_29
+  - first:
+      213: 3144483239283431974
+    second: Pedra-v3_30
+  - first:
+      213: 1690988156696980974
+    second: Pedra-v3_31
+  - first:
+      213: -3220865527191675896
+    second: Pedra-v3_32
+  - first:
+      213: -4553624635121611182
+    second: Pedra-v3_33
+  - first:
+      213: -2941909885905056796
+    second: Pedra-v3_34
+  - first:
+      213: 8736043487098638801
+    second: Pedra-v3_35
+  - first:
+      213: 2914299446687340702
+    second: Pedra-v3_36
+  - first:
+      213: -6659679628188523444
+    second: Pedra-v3_37
+  - first:
+      213: -5069264001301525575
+    second: Pedra-v3_38
+  - first:
+      213: 1622466379262682548
+    second: Pedra-v3_39
+  - first:
+      213: 3636778005889286422
+    second: Pedra-v3_40
+  - first:
+      213: -715990572069656767
+    second: Pedra-v3_41
+  - first:
+      213: 3307910953122049963
+    second: Pedra-v3_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pedra-v3_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 596
+        width: 324
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a245a19435374bbc0800000000000000
+      internalID: -3768260186656320470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_1
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 575
+        width: 474
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0d30356e1caa440800000000000000
+      internalID: 4947980335599308993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_2
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 836
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8836a17d5ae6930800000000000000
+      internalID: 4138427450879346870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_3
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 759
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5294ee2f3b5f844b0800000000000000
+      internalID: -5455840795335702235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_4
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 713
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9553c091266e40cc0800000000000000
+      internalID: -3745615681063996071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_5
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 693
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2298f7cdafce2fad0800000000000000
+      internalID: -2669811066891957982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_6
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 658
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d708cfc525aaa8ca0800000000000000
+      internalID: -6013807081675784067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_7
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 640
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e828e3676aa77c860800000000000000
+      internalID: 7550138155676893838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_8
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 660
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26189fa7b0a8c7820800000000000000
+      internalID: 2917358440541684066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_9
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 585
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b9ce260d7dad51b0800000000000000
+      internalID: -5666182003675969098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_10
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 310
+        width: 366
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d218541bdb8ce0b90800000000000000
+      internalID: -7273655631108275923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_11
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 539
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d307d8d8cb1edbc50800000000000000
+      internalID: 6682745622032642109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_12
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 462
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bbd47efe3c76c450800000000000000
+      internalID: 6108706554573544376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_13
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 416
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2206edb4b45ea8c0800000000000000
+      internalID: -3986155484919496149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_14
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 396
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c9155b819e8f190800000000000000
+      internalID: -7928330851655246755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_15
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 361
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd49fec36fee08d0800000000000000
+      internalID: -2878099899889922593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_16
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 343
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff17935e705b79ac0800000000000000
+      internalID: -3848408311049653761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_17
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 363
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e15f299e28389d0800000000000000
+      internalID: -2773229005825565114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_18
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 288
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 706bbc429bc309370800000000000000
+      internalID: 8327222476891993607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_19
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 253
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 643faded8dca4e9a0800000000000000
+      internalID: -6204644339157896378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_20
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 250
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd8810bce99bcd6a0800000000000000
+      internalID: -6423054876875323173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 259
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ab3079aa062a690800000000000000
+      internalID: -7592399735998924234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_22
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 176
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1e3f955d0932240800000000000000
+      internalID: 4765812076699705850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_23
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 173
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bed8621bdc6a365f0800000000000000
+      internalID: -764584109352251925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_24
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 182
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ef655434b601420800000000000000
+      internalID: 2598694921663086212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_25
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 130
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a8a4ef236976bf80800000000000000
+      internalID: -8091146213612279647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_26
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 136
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75414d09f749c770800000000000000
+      internalID: 8631509295827076479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_27
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 110
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c30b6fb2d15291a90800000000000000
+      internalID: -7342796910229016516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_28
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 127
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c62ab3c511e6d83f0800000000000000
+      internalID: -896939729935949204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_29
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 116
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c97bf809a671350800000000000000
+      internalID: 5987371398731373692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_30
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 107
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a98af88d273ab20800000000000000
+      internalID: 3144483239283431974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_31
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 81
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eede05fe4c8977710800000000000000
+      internalID: 1690988156696980974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_32
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 83
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c507e2edf2d43d0800000000000000
+      internalID: -3220865527191675896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_33
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 75
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ecb1f35864ec0c0800000000000000
+      internalID: -4553624635121611182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_34
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 57
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb4b61bb8c3c27d0800000000000000
+      internalID: -2941909885905056796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_35
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 77
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d111e61449ac3970800000000000000
+      internalID: 8736043487098638801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_36
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 72
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e989ae8f7eba17820800000000000000
+      internalID: 2914299446687340702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_37
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 74
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44eae3a9a01493a0800000000000000
+      internalID: -6659679628188523444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_38
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 63
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb4fb9bf3b56a9b0800000000000000
+      internalID: -5069264001301525575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_39
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 54
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b567f36398248610800000000000000
+      internalID: 1622466379262682548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6110cffe35e687230800000000000000
+      internalID: 3636778005889286422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_41
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 0
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14762414e5a4016f0800000000000000
+      internalID: -715990572069656767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedra-v3_42
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 8
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bafa67d5c7f08ed20800000000000000
+      internalID: 3307910953122049963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Pedra-v3_0: -3768260186656320470
+      Pedra-v3_1: 4947980335599308993
+      Pedra-v3_10: -7273655631108275923
+      Pedra-v3_11: 6682745622032642109
+      Pedra-v3_12: 6108706554573544376
+      Pedra-v3_13: -3986155484919496149
+      Pedra-v3_14: -7928330851655246755
+      Pedra-v3_15: -2878099899889922593
+      Pedra-v3_16: -3848408311049653761
+      Pedra-v3_17: -2773229005825565114
+      Pedra-v3_18: 8327222476891993607
+      Pedra-v3_19: -6204644339157896378
+      Pedra-v3_2: 4138427450879346870
+      Pedra-v3_20: -6423054876875323173
+      Pedra-v3_21: -7592399735998924234
+      Pedra-v3_22: 4765812076699705850
+      Pedra-v3_23: -764584109352251925
+      Pedra-v3_24: 2598694921663086212
+      Pedra-v3_25: -8091146213612279647
+      Pedra-v3_26: 8631509295827076479
+      Pedra-v3_27: -7342796910229016516
+      Pedra-v3_28: -896939729935949204
+      Pedra-v3_29: 5987371398731373692
+      Pedra-v3_3: -5455840795335702235
+      Pedra-v3_30: 3144483239283431974
+      Pedra-v3_31: 1690988156696980974
+      Pedra-v3_32: -3220865527191675896
+      Pedra-v3_33: -4553624635121611182
+      Pedra-v3_34: -2941909885905056796
+      Pedra-v3_35: 8736043487098638801
+      Pedra-v3_36: 2914299446687340702
+      Pedra-v3_37: -6659679628188523444
+      Pedra-v3_38: -5069264001301525575
+      Pedra-v3_39: 1622466379262682548
+      Pedra-v3_4: -3745615681063996071
+      Pedra-v3_40: 3636778005889286422
+      Pedra-v3_41: -715990572069656767
+      Pedra-v3_42: 3307910953122049963
+      Pedra-v3_5: -2669811066891957982
+      Pedra-v3_6: -6013807081675784067
+      Pedra-v3_7: 7550138155676893838
+      Pedra-v3_8: 2917358440541684066
+      Pedra-v3_9: -5666182003675969098
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
