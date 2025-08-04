@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using System.Linq;
-using Models.NeonSet;
 using UnityEngine;
 
 public class PlayerSpriteBehaviour : MonoBehaviour
@@ -10,54 +8,8 @@ public class PlayerSpriteBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (EquipSetName == "Neon Set")
-        {
-            _equipSet = new NeonSet();
-        }
 
-        if (EquipSetName == "Neon Sword")
-        {
-            _equipSet = new AnyEquipSet()
-            {
-                Items = { new NeonRightSword() }
-            };
-
-            _equipSet.HideSprites = new List<string>()
-            { 
-                "Sprites/Body/Shoulder L/Arm L/Equip Arm L (Shield)"
-            };
-        }
-
-        if (EquipSetName == "Neon Double Sword")
-        {
-            _equipSet = new AnyEquipSet();
-            _equipSet.Items = new List<Item>()
-            {
-                new NeonRightSword(),
-                new NeonLeftSword()
-            };
-
-            _equipSet.HideSprites = new List<string>()
-            { 
-                "Sprites/Body/Shoulder L/Arm L/Equip Arm L (Shield)"
-            };
-        }
-
-        if (EquipSetName == "Neon Knight")
-        {
-            _equipSet = new AnyEquipSet();
-            _equipSet.Items = new List<Item>()
-            {
-                new NeonRightSword(),
-                new NeonShield()
-            };
-
-            _equipSet.HideSprites = new List<string>()
-            { 
-                "Sprites/Body/Shoulder L/Arm L/Equip Arm L (Sword)"
-            };
-        }
-
+        _equipSet = PlayerEquipSetFactory.Get(EquipSetName);
         if (_equipSet == null) return;
 
         foreach (var item in _equipSet.Items)
