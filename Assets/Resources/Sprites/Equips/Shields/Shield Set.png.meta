@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield Neon Blue 1
+      name: Neon Shield
       rect:
         serializedVersion: 2
         x: 533
@@ -231,7 +231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield Neon Blue 2
+      name: Neon Shield Lvl2
       rect:
         serializedVersion: 2
         x: 1247
@@ -310,13 +310,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Neon Shield: -4831495854479517531
+      Neon Shield Lvl2: -1785503970797928867
       Shield Basic: -404869373198648143
       Shield Basic 2: -579243271349185119
       Shield Fancy 1: -6363569265681391355
       Shield Fancy 2: 1922151994420021151
       Shield Fancy 3: -2690143109794468761
-      Shield Neon Blue 1: -4831495854479517531
-      Shield Neon Blue 2: -1785503970797928867
       Shield Roboust: -4591015990886545822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

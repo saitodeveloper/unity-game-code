@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7328481519867739590}
-  - component: {fileID: 6943902260557216352}
   - component: {fileID: 5022406071138759524}
+  - component: {fileID: 6943902260557216352}
+  - component: {fileID: 102547480201111605}
   m_Layer: 0
   m_Name: Bush
-  m_TagString: Nature
+  m_TagString: NatureCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +35,28 @@ Transform:
   - {fileID: 2587594341817463906}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &5022406071138759524
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018961037758360010}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28480c0dd76303d40be2fd7e8697e95a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!70 &6943902260557216352
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -68,31 +91,22 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.14638805, y: 0.56536156}
-  m_Size: {x: 3.720543, y: 4.851267}
+  m_Offset: {x: -0.07965636, y: 0.6447723}
+  m_Size: {x: 4.4555707, y: 5.119291}
   m_Direction: 0
---- !u!95 &5022406071138759524
-Animator:
-  serializedVersion: 7
+--- !u!114 &102547480201111605
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018961037758360010}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 28480c0dd76303d40be2fd7e8697e95a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66cbbe122136dea4da4181497867f8ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BerriesQuantity: 0
 --- !u!1 &2253762434657160665
 GameObject:
   m_ObjectHideFlags: 0

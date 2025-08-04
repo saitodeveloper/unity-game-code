@@ -1,37 +1,34 @@
 fileFormatVersion: 2
-guid: 8ba7ae4c4f7ab524b9bfe3244950e805
+guid: e92a574b57ec43d428766f09504fc4b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8284170195137012565
-    second: espadas_v2-split_0
+      213: 8949882845591349531
+    second: Armadura-v3 1_0
   - first:
-      213: 3967913165370095171
-    second: espadas_v2-split_1
+      213: 6359341110799292586
+    second: Armadura-v3 1_1
   - first:
-      213: 1654611767359151993
-    second: espadas_v2-split_2
+      213: -4897600195470551083
+    second: Armadura-v3 1_2
   - first:
-      213: -8797870899559888470
-    second: espadas_v2-split_3
+      213: 6222266494041210568
+    second: Armadura-v3 1_3
   - first:
-      213: -1334861299441824178
-    second: espadas_v2-split_4
+      213: -6910985755167202418
+    second: Armadura-v3 1_4
   - first:
-      213: -7465953644410127095
-    second: espadas_v2-split_5
+      213: 6050157801827984196
+    second: Armadura-v3 1_5
   - first:
-      213: -8262525065255013459
-    second: espadas_v2-split_6
+      213: 3886571883171456508
+    second: Armadura-v3 1_6
   - first:
-      213: -995805570633644800
-    second: espadas_v2-split_7
+      213: -6298623017685450938
+    second: Armadura-v3 1_7
   - first:
-      213: -54991200893955361
-    second: espadas_v2-split_8
-  - first:
-      213: 7232096986609900619
-    second: espadas_v2-split_9
+      213: -6377450667000236023
+    second: Armadura-v3 1_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -127,199 +124,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sword 1
+      name: Neon Head
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 358
+        width: 322
+        height: 315
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6177134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19a5d0970f543c70800000000000000
+      internalID: 8949882845591349531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Mouth
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 464
+        width: 239
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa8daba0c0be04850800000000000000
+      internalID: 6359341110799292586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armadura-v3 1_2
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 387
+        width: 214
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d71811229a380cb0800000000000000
+      internalID: -4897600195470551083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon L Shoulder
       rect:
         serializedVersion: 2
         x: 0
-        y: 6
-        width: 152
-        height: 444
-      alignment: 9
-      pivot: {x: 0.51552624, y: 0.18462566}
+        y: 218
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bacdaf35917b80d80800000000000000
-      internalID: -8284170195137012565
+      spriteID: 8ce342bc86ee95650800000000000000
+      internalID: 6222266494041210568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword 2
+      name: Neon Torso
       rect:
         serializedVersion: 2
-        x: 193
+        x: 105
         y: 0
-        width: 102
-        height: 480
+        width: 175
+        height: 356
       alignment: 9
-      pivot: {x: 0.42287564, y: 0.13780694}
+      pivot: {x: 0.5609971, y: 0.4999999}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 346fa71400cd01730800000000000000
-      internalID: 3967913165370095171
+      spriteID: e836977521f3710a0800000000000000
+      internalID: -6910985755167202418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword 3
+      name: Neon R Shoulder
       rect:
         serializedVersion: 2
-        x: 343
-        y: 11
-        width: 81
-        height: 457
-      alignment: 9
-      pivot: {x: 0.48057574, y: 0.08342947}
+        x: 292
+        y: 237
+        width: 91
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97f9f9ac2ac56f610800000000000000
-      internalID: 1654611767359151993
+      spriteID: 443e305377a76f350800000000000000
+      internalID: 6050157801827984196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword 4
+      name: Neon Arm
       rect:
         serializedVersion: 2
-        x: 445
-        y: 1
-        width: 97
-        height: 489
+        x: 16
+        y: 61
+        width: 47
+        height: 147
       alignment: 9
-      pivot: {x: 0.48378038, y: 0.09138526}
+      pivot: {x: 0.5, y: 0.93569416}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa98cfba70fa7e580800000000000000
-      internalID: -8797870899559888470
+      spriteID: cf5a47a2980efe530800000000000000
+      internalID: 3886571883171456508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword 5
+      name: Neon Right Leg
       rect:
         serializedVersion: 2
-        x: 560
-        y: 0
-        width: 140
-        height: 525
+        x: 309
+        y: 52
+        width: 47
+        height: 148
       alignment: 9
-      pivot: {x: 0.47190508, y: 0.17035024}
+      pivot: {x: 0.55112994, y: 0.92866457}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4e8a5678be997de0800000000000000
-      internalID: -1334861299441824178
+      spriteID: 64f72c8acbbc698a0800000000000000
+      internalID: -6298623017685450938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword 6
+      name: Neon Left Leg
       rect:
         serializedVersion: 2
-        x: 746
-        y: 9
-        width: 104
-        height: 457
+        x: 437
+        y: 53
+        width: 76
+        height: 135
       alignment: 9
-      pivot: {x: 0.4470514, y: 0.088593505}
+      pivot: {x: 0.71501684, y: 0.94146174}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da3b6b9da3d955d80800000000000000
-      internalID: -8262525065255013459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sword 7
-      rect:
-        serializedVersion: 2
-        x: 882
-        y: 1
-        width: 96
-        height: 544
-      alignment: 9
-      pivot: {x: 0.47541618, y: 0.10811409}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 005c6090c103e22f0800000000000000
-      internalID: -995805570633644800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sword 8
-      rect:
-        serializedVersion: 2
-        x: 994
-        y: 4
-        width: 56
-        height: 498
-      alignment: 9
-      pivot: {x: 0.5, y: 0.087712154}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd291fc4bc1ac3ff0800000000000000
-      internalID: -54991200893955361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sword 9
-      rect:
-        serializedVersion: 2
-        x: 1062
-        y: 2
-        width: 80
-        height: 338
-      alignment: 9
-      pivot: {x: 0.5196625, y: 0.21140115}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b4c5e0c54e19d5460800000000000000
-      internalID: 7232096986609900619
+      spriteID: 9087fd4586ebe77a0800000000000000
+      internalID: -6377450667000236023
       vertices: []
       indices: 
       edges: []
@@ -328,7 +325,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4c31ec2c3134e594ca93a474cfeefcfc
+    spriteID: b2c7c9ac38490454a8725cccf58a0120
     internalID: 0
     vertices: []
     indices: 
@@ -338,16 +335,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sword 1: -8284170195137012565
-      Sword 2: 3967913165370095171
-      Sword 3: 1654611767359151993
-      Sword 4: -8797870899559888470
-      Sword 5: -1334861299441824178
-      Sword 6: -8262525065255013459
-      Sword 7: -995805570633644800
-      Sword 8: -54991200893955361
-      Sword 9: 7232096986609900619
-      espadas_v2-split_5: -7465953644410127095
+      Armadura-v3 1_2: -4897600195470551083
+      Neon Arm: 3886571883171456508
+      Neon Head: 8949882845591349531
+      Neon L Shoulder: 6222266494041210568
+      Neon Left Leg: -6377450667000236023
+      Neon Mouth: 6359341110799292586
+      Neon R Shoulder: 6050157801827984196
+      Neon Right Leg: -6298623017685450938
+      Neon Torso: -6910985755167202418
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

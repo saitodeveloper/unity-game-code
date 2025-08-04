@@ -6,6 +6,16 @@ public class CameraBehavior : MonoBehaviour
     public float smoothSpeed = 1f;
     public Vector3 offset = new Vector3(0, 0, -10);
 
+    void Start()
+    {
+        GameObject gameObject = GameObject.FindWithTag("Player");
+
+        if (gameObject != null)
+        {
+            target = gameObject.transform;
+        }
+    }
+
     void LateUpdate()
     {
         if (target == null) return;
