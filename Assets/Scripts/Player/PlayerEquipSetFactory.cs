@@ -7,7 +7,6 @@ public class PlayerEquipSetFactory
     private static readonly Dictionary<string, Func<EquipSet>> Factory = new()
     {
         { "Neon Set", () => new NeonSet() },
-
         { "Neon Sword", () => new AnyEquipSet
             {
                 Items = { new NeonRightSword() },
@@ -17,7 +16,6 @@ public class PlayerEquipSetFactory
                 }
             }
         },
-
         { "Neon Double Sword", () => new AnyEquipSet
             {
                 Items = new List<Item>
@@ -31,7 +29,6 @@ public class PlayerEquipSetFactory
                 }
             }
         },
-
         { "Neon Knight", () => new AnyEquipSet
             {
                 Items = new List<Item>
@@ -49,7 +46,7 @@ public class PlayerEquipSetFactory
 
     public static EquipSet Get(string equipSetName)
     {
-        if (Factory.TryGetValue(equipSetName, out var creator))
+        if (!string.IsNullOrEmpty(equipSetName) && Factory.TryGetValue(equipSetName, out var creator))
         {
             return creator();
         }
