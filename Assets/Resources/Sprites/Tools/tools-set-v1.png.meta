@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 3669f48769af043488932c642ad3cbe3
+guid: 825962103aeca1b41b1fd2cbed58da54
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 670814536372784037
-    second: Armadura-v1 1_0
+      213: -8019665270697289638
+    second: tools-set-v1_0
   - first:
-      213: 1198338082752173261
-    second: Armadura-v1 1_1
+      213: 5977174325709635124
+    second: tools-set-v1_1
   - first:
-      213: -506305974164717747
-    second: Armadura-v1 1_2
-  - first:
-      213: 8216113526672876144
-    second: Armadura-v1 1_3
-  - first:
-      213: -4283215909969872428
-    second: Armadura-v1 1_4
-  - first:
-      213: 1680541714499052891
-    second: Armadura-v1 1_5
+      213: -180953202876414588
+    second: tools-set-v1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,133 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Helm Head Armor 1
+      name: tools-set-v1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 316
-        width: 324
-        height: 215
+        y: 2
+        width: 180
+        height: 226
       alignment: 9
-      pivot: {x: 0.47810948, y: 0.5164982}
+      pivot: {x: 0.3188486, y: 0.23675248}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ab0ba644463f4900800000000000000
-      internalID: 670814536372784037
+      spriteID: a581d822dec64b090800000000000000
+      internalID: -8019665270697289638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoulder L Armor 1
+      name: tools-set-v1_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 175
-        width: 72
-        height: 107
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 190
+        y: 3
+        width: 262
+        height: 252
+      alignment: 9
+      pivot: {x: 0.48471606, y: 0.37968636}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc4144f132a51a010800000000000000
-      internalID: 1198338082752173261
+      spriteID: 43ef18c716033f250800000000000000
+      internalID: 5977174325709635124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoulder R Armor 1
+      name: tools-set-v1_2
       rect:
         serializedVersion: 2
-        x: 100
-        y: 182
-        width: 70
-        height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d4ff046266d39f8f0800000000000000
-      internalID: -506305974164717747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Torso Armor 1
-      rect:
-        serializedVersion: 2
-        x: 174
+        x: 470
         y: 0
-        width: 150
-        height: 315
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0726e9fb8bf750270800000000000000
-      internalID: 8216113526672876144
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg R Armor 1
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 18
-        width: 47
-        height: 147
+        width: 206
+        height: 283
       alignment: 9
-      pivot: {x: 0.4811369, y: 0.9281986}
+      pivot: {x: 0.4861154, y: 0.32413784}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d9b1f5c2d5fe84c0800000000000000
-      internalID: -4283215909969872428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg L Armor 1
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 20
-        width: 76
-        height: 135
-      alignment: 9
-      pivot: {x: 0.67497736, y: 0.9301421}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b5521f219cb725710800000000000000
-      internalID: 1680541714499052891
+      spriteID: 485059d45002d7df0800000000000000
+      internalID: -180953202876414588
       vertices: []
       indices: 
       edges: []
@@ -250,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d1ad818c13d7ae14a80e2e631324be0c
+    spriteID: 94fd1d00ffd990a4bafee2875df3ca33
     internalID: 0
     vertices: []
     indices: 
@@ -260,13 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      1: 8216113526672876144
-      Helm Head Armor 1: 670814536372784037
-      Leg L Armor 1: 1680541714499052891
-      Leg R Armor 1: -4283215909969872428
-      Shoulder L Armor 1: 1198338082752173261
-      Shoulder R Armor 1: -506305974164717747
-      Torso Armor 1: 8216113526672876144
+      tools-set-v1_0: -8019665270697289638
+      tools-set-v1_1: 5977174325709635124
+      tools-set-v1_2: -180953202876414588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

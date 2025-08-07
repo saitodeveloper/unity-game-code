@@ -35,22 +35,26 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 _playerStateController.CollectingItemClicked = _targetGameObject.CompareTag("NatureCollectable");
             }
+            else
+            {
+                _playerStateController.CollectingItemClicked = false;
+            }
         }
 
         if (_targetGameObject != null)
         {
             Collider2D enemyCollider = _targetGameObject.GetComponent<Collider2D>();
-            float enemyRadius = enemyCollider.bounds.size.x / 2f;
+            float targetRadius = enemyCollider.bounds.size.x / 1f;
             float distanceToEdge = Vector3.Distance(
                 transform.position, _targetGameObject.transform.position
-            ) - enemyRadius;
+            ) - targetRadius;
             _playerStateController.PlayerTargetDistance = distanceToEdge;
         }
 
         _playerStateController.ForceStop =
             _touchedObject != null &&
             _targetGameObject != null &&
-            _playerStateController.PlayerTargetDistance <= 3f;
+            _playerStateController.PlayerTargetDistance <= 2f;
 
         _playerStateController.IsAccelerating = Input.GetAxis("Fire3") > 0;
         _playerStateController.IsMoving =
@@ -115,7 +119,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != null && collision.gameObject.CompareTag("NatureCollectable"))
         {

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5022406071138759524}
   - component: {fileID: 6943902260557216352}
   - component: {fileID: 102547480201111605}
+  - component: {fileID: 2730002636167947113}
   m_Layer: 0
   m_Name: Bush
   m_TagString: NatureCollectable
@@ -87,12 +88,12 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.07965636, y: 0.6447723}
-  m_Size: {x: 4.4555707, y: 5.119291}
+  m_Offset: {x: 0.030063152, y: 0.28376412}
+  m_Size: {x: 2.9619856, y: 3.9725585}
   m_Direction: 0
 --- !u!114 &102547480201111605
 MonoBehaviour:
@@ -107,6 +108,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BerriesQuantity: 0
+--- !u!70 &2730002636167947113
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018961037758360010}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.06454563, y: 0.39923036}
+  m_Size: {x: 2.0730133, y: 2.584602}
+  m_Direction: 0
 --- !u!1 &2253762434657160665
 GameObject:
   m_ObjectHideFlags: 0

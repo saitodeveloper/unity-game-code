@@ -7,7 +7,7 @@ public class PlayerEquipSetFactory
     private static readonly Dictionary<string, Func<EquipSet>> Factory = new()
     {
         { "Neon Set", () => new NeonSet() },
-        { "Neon Sword", () => new AnyEquipSet
+        { "Neon Right Sword", () => new AnyEquipSet
             {
                 Items = { new NeonRightSword() },
                 HideSprites = new List<string>
@@ -16,11 +16,10 @@ public class PlayerEquipSetFactory
                 }
             }
         },
-        { "Neon Double Sword", () => new AnyEquipSet
+        { "Neon Left Sword", () => new AnyEquipSet
             {
                 Items = new List<Item>
                 {
-                    new NeonRightSword(),
                     new NeonLeftSword()
                 },
                 HideSprites = new List<string>
