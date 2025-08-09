@@ -8,8 +8,8 @@ public class PlayerBehaviour : MonoBehaviour
     public float speed = 8;
     public float sprintMultiplier = 2;
     public Vector3 target;
-    private string[] _rightMovement = { "N", "NE", "S", "SE", "E" };
     private GameObject _targetGameObject = null;
+    private MonsterBehaviour _targetEnemy = null;
     private ItemAbstractBehaviour _touchedObject = null;
     private Animator _animator;
     private PlayerStateController _playerStateController = new PlayerStateController();
@@ -23,36 +23,53 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) || Input.GetMouseButton(0))
         {
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            target.z = transform.position.z;
+
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
             _targetGameObject = hit.collider?.gameObject;
+            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            target.z = transform.position.z;
 
             if (_targetGameObject != null)
             {
                 _playerStateController.CollectingItemClicked = _targetGameObject.CompareTag("NatureCollectable");
+                _playerStateController.EnemyClicked = _targetGameObject.CompareTag("Enemy");
             }
             else
             {
                 _playerStateController.CollectingItemClicked = false;
+                _playerStateController.EnemyClicked = false;
             }
+        }
+
+        if (!_playerStateController.EnemyClicked & _targetGameObject == null && _targetEnemy != null)
+        {
+            _targetEnemy?.OnReleaseObject();
+        }
+
+        if (_targetGameObject != null && _targetGameObject.gameObject.CompareTag("Enemy"))
+        {
+            _targetEnemy = _targetGameObject.gameObject.GetComponent<MonsterBehaviour>();
+            _targetEnemy?.OnForceStop();
+        }
+
+        if (_targetGameObject != null && _targetGameObject.gameObject.CompareTag("NatureCollectable"))
+        {
+            _touchedObject = _targetGameObject.gameObject.GetComponent<BushBehaviour>();
         }
 
         if (_targetGameObject != null)
         {
             Collider2D enemyCollider = _targetGameObject.GetComponent<Collider2D>();
-            float targetRadius = enemyCollider.bounds.size.x / 1f;
-            float distanceToEdge = Vector3.Distance(
+            float targetRadius = enemyCollider.bounds.size.x / 2f;
+            _playerStateController.PlayerTargetDistance = Vector3.Distance(
                 transform.position, _targetGameObject.transform.position
             ) - targetRadius;
-            _playerStateController.PlayerTargetDistance = distanceToEdge;
         }
 
         _playerStateController.ForceStop =
-            _touchedObject != null &&
             _targetGameObject != null &&
             _playerStateController.PlayerTargetDistance <= 2f;
 
@@ -63,7 +80,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         Vector3 scale = transform.localScale;
         string direction = CompassIndicator.WalkingDirection(transform.position, target);
-        bool toFaceRight = _rightMovement.Contains(direction);
+        bool toFaceRight = CompassIndicator.FaceRight(direction);
 
         if (toFaceRight)
         {
@@ -91,7 +108,6 @@ public class PlayerBehaviour : MonoBehaviour
             _animator.SetBool("isAttacking", _playerStateController.IsAttacking);
             _animator.SetBool("isCollecting",
                 _playerStateController.CollectingItemClicked &&
-                _touchedObject != null &&
                 _touchedObject.Item.Quanity > 0
             );
         }
@@ -116,14 +132,6 @@ public class PlayerBehaviour : MonoBehaviour
             transform.position = Vector3.MoveTowards(
                 transform.position, target, totalSpeed * Time.deltaTime
             );
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision != null && collision.gameObject.CompareTag("NatureCollectable"))
-        {
-            _touchedObject = collision.gameObject.GetComponent<BushBehaviour>();
         }
     }
 }
