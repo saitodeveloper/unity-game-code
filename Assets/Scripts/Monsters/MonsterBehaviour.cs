@@ -12,6 +12,16 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
     private Vector3 _instantPosition;
     private bool _isWalking = false;
 
+    void OnEnable()
+    {
+        PlayerBehaviour.HitAction += OnCambatInteraction;
+    }
+
+    private void OnDisable()
+    {
+        PlayerBehaviour.HitAction -= OnCambatInteraction;
+    }
+
     void Start()
     {
         this._animator = GetComponent<Animator>();
@@ -59,6 +69,13 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
         transform.localScale = scale;
 
         this._animator?.SetBool("isWalking", _isWalking);
+
+        var state = _animator.GetCurrentAnimatorStateInfo(0);
+
+        if (state.IsName("InPain") && state.normalizedTime >= 1f)
+        {
+            this._animator.SetBool("inPain", false);
+        }
     }
 
     void FixedUpdate()
@@ -93,5 +110,15 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
     public override void OnReleaseObject()
     {
         ForceStop = false;
+    }
+
+    public override void OnCombatPause()
+    {
+
+    }
+
+    public override bool IsEnemyAlive()
+    {
+        return true;
     }
 }

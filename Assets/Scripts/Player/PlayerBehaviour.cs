@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    public static Action HitAction;
     public float speed = 8;
     public float sprintMultiplier = 2;
     public Vector3 target;
@@ -148,6 +149,7 @@ public class PlayerBehaviour : MonoBehaviour
             _animator.SetBool("isRunning", false);
             _animator.SetBool("isAttacking",
                 _targetEnemy != null &&
+                _targetEnemy.IsEnemyAlive() &&
                 _playerStateController.IsEnemyChallenged
             );
             _animator.SetBool("isCollecting",
@@ -155,6 +157,11 @@ public class PlayerBehaviour : MonoBehaviour
                 _targetItem.Item.Quanity > 0
             );
         }
+    }
+
+    public void OnHitEvent()
+    {
+        HitAction?.Invoke();
     }
 
     private void BroadcastInfo()
@@ -167,14 +174,6 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 _targetItem.OnInteractionFinished(_items);
                 _targetItem = null;
-            }
-        }
-
-        if (state.IsName("Explorer Attack 1") && state.normalizedTime >= 1f)
-        {
-            if (_targetEnemy != null)
-            {
-                _targetEnemy.OnCambatInteraction();
             }
         }
     }

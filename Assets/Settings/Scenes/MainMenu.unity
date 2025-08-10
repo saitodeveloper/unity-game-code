@@ -334,7 +334,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 201
-  m_Sprite: {fileID: 5222795861258911476, guid: 41373281e406f3547a0b74fb9757504c, type: 3}
+  m_Sprite: {fileID: 5396804474248073843, guid: c320da2df13224146be678a8095ee44f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -455,7 +455,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 201
-  m_Sprite: {fileID: 5222795861258911476, guid: 41373281e406f3547a0b74fb9757504c, type: 3}
+  m_Sprite: {fileID: 5396804474248073843, guid: c320da2df13224146be678a8095ee44f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -702,7 +702,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 200
-  m_Sprite: {fileID: 8892322576897190960, guid: 41373281e406f3547a0b74fb9757504c, type: 3}
+  m_Sprite: {fileID: -6411788808232428665, guid: c320da2df13224146be678a8095ee44f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -726,8 +726,20 @@ PrefabInstance:
       value: Bush
       objectReference: {fileID: 0}
     - target: {fileID: 6943902260557216352, guid: e640aed41fe76304f9f92a6e72194664, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
+      propertyPath: m_Size.x
+      value: 1.8645897
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943902260557216352, guid: e640aed41fe76304f9f92a6e72194664, type: 3}
+      propertyPath: m_Size.y
+      value: 3.703663
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943902260557216352, guid: e640aed41fe76304f9f92a6e72194664, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.08614445
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943902260557216352, guid: e640aed41fe76304f9f92a6e72194664, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.38876617
       objectReference: {fileID: 0}
     - target: {fileID: 7328481519867739590, guid: e640aed41fe76304f9f92a6e72194664, type: 3}
       propertyPath: m_LocalPosition.x
