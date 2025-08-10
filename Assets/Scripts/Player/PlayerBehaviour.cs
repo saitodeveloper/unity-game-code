@@ -16,6 +16,7 @@ public class PlayerBehaviour : MonoBehaviour
     private PlayerStateController _playerStateController = new PlayerStateController();
     public List<Item> _items;
     private float _limitDistance = 3f;
+    private float _attackRestTimer = 5f;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update()
     {
+        this.CalculateTimers();
         this.CaptureClick();
         this.CaptureCommands();
         this.UpdatePlayerActions();
@@ -41,6 +43,19 @@ public class PlayerBehaviour : MonoBehaviour
             transform.position = Vector3.MoveTowards(
                 transform.position, target, totalSpeed * Time.deltaTime
             );
+        }
+    }
+
+    void CalculateTimers()
+    {
+        if (_attackRestTimer <= 0f)
+        {
+            _playerStateController.AttackEnabled = true;
+            _attackRestTimer = 5f;
+        }
+        if (_attackRestTimer >= 0f)
+        {
+            _attackRestTimer -= Time.deltaTime * 1.0f;
         }
     }
 
@@ -142,16 +157,23 @@ public class PlayerBehaviour : MonoBehaviour
             _animator.SetBool("isRunning", _playerStateController.IsAccelerating);
             _animator.SetBool("isAttacking", false);
             _animator.SetBool("isCollecting", false);
+            _animator.SetBool("isFighting", false);
         }
         else
         {
             _animator.SetBool("isWalking", false);
             _animator.SetBool("isRunning", false);
-            _animator.SetBool("isAttacking",
+            _animator.SetBool("isFighting",
                 _targetEnemy != null &&
                 _targetEnemy.IsEnemyAlive() &&
                 _playerStateController.IsEnemyChallenged
             );
+            if (_playerStateController.AttackEnabled)
+                _animator.SetBool("isAttacking",
+                    _targetEnemy != null &&
+                    _targetEnemy.IsEnemyAlive() &&
+                    _playerStateController.IsEnemyChallenged
+                );
             _animator.SetBool("isCollecting",
                 _targetItem != null &&
                 _targetItem.Item.Quanity > 0
@@ -161,7 +183,16 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void OnHitEvent()
     {
-        HitAction?.Invoke();
+        if (_playerStateController.AttackEnabled)
+        {
+            HitAction?.Invoke();
+        }
+    }
+
+    public void DisableAttack()
+    {
+        _playerStateController.AttackEnabled = false;
+        _animator.SetBool("isAttacking", false);
     }
 
     private void BroadcastInfo()

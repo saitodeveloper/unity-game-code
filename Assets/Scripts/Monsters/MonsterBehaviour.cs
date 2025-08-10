@@ -97,6 +97,11 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
         this._animator.SetBool("inPain", true);
     }
 
+    public void StopInPain()
+    {
+        this._animator.SetBool("inPain", false);
+    }
+
     public override void OnCombatFinished()
     {
 
