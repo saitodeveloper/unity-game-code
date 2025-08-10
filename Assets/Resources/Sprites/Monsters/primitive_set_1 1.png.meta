@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: 41373281e406f3547a0b74fb9757504c
+guid: c320da2df13224146be678a8095ee44f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3175594266520210154
-    second: primitive_set_1_0
+      213: 6608392678669944811
+    second: primitive_set_1 1_0
   - first:
-      213: -1303785611183345613
-    second: primitive_set_1_1
+      213: 5047510655399246883
+    second: primitive_set_1 1_1
   - first:
-      213: 8892322576897190960
-    second: primitive_set_1_2
+      213: 5396804474248073843
+    second: primitive_set_1 1_2
   - first:
-      213: 5222795861258911476
-    second: primitive_set_1_3
+      213: -3542690869223780298
+    second: primitive_set_1 1_3
   - first:
-      213: 5254001833120114788
-    second: primitive_set_1_4
+      213: -6411788808232428665
+    second: primitive_set_1 1_4
+  - first:
+      213: -32419658002193685
+    second: primitive_set_1 1_5
+  - first:
+      213: -3114372879637162753
+    second: primitive_set_1 1_6
+  - first:
+      213: -6600392877469283904
+    second: primitive_set_1 1_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,111 +121,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Poison
+      name: primitive_set_1 1_0
       rect:
         serializedVersion: 2
         x: 5
-        y: 657
+        y: 770
         width: 491
-        height: 423
+        height: 424
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 615bb41f6d50ee3d0800000000000000
-      internalID: -3175594266520210154
+      spriteID: be70a64e02ab5bb50800000000000000
+      internalID: 6608392678669944811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rock
+      name: primitive_set_1 1_1
       rect:
         serializedVersion: 2
-        x: 567
-        y: 638
+        x: 750
+        y: 757
         width: 449
         height: 439
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 330b626f4e508ede0800000000000000
-      internalID: -1303785611183345613
+      spriteID: 32c321fb23c5c0640800000000000000
+      internalID: 5047510655399246883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire
+      name: primitive_set_1 1_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 407
-        height: 583
-      alignment: 9
-      pivot: {x: 0.5, y: 0.37026602}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 03ca4282540e76b70800000000000000
-      internalID: 8892322576897190960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eye
-      rect:
-        serializedVersion: 2
-        x: 412
-        y: 498
+        x: 514
+        y: 625
         width: 69
         height: 141
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4feb7bc0a291b7840800000000000000
-      internalID: 5222795861258911476
+      spriteID: 3729bc9631d45ea40800000000000000
+      internalID: 5396804474248073843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water
+      name: primitive_set_1 1_3
       rect:
         serializedVersion: 2
-        x: 534
-        y: 6
-        width: 422
-        height: 579
+        x: 628
+        y: 642
+        width: 110
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 468206094d6f9e840800000000000000
-      internalID: 5254001833120114788
+      spriteID: 63095e6ac65d5dec0800000000000000
+      internalID: -3542690869223780298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: primitive_set_1 1_4
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 12
+        width: 407
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b1b7ecc00c407a0800000000000000
+      internalID: -6411788808232428665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: primitive_set_1 1_5
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 422
+        width: 121
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be22a092e72dc8ff0800000000000000
+      internalID: -32419658002193685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: primitive_set_1 1_6
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 418
+        width: 121
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff4dd1bdd5687c4d0800000000000000
+      internalID: -3114372879637162753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: primitive_set_1 1_7
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 3
+        width: 422
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c9cc68f5a1b664a0800000000000000
+      internalID: -6600392877469283904
       vertices: []
       indices: 
       edges: []
@@ -225,7 +300,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: edf33a43aa18e3d47a4e237cd2f00ef5
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Eye: 5222795861258911476
-      Fire: 8892322576897190960
-      Poison: -3175594266520210154
-      Rock: -1303785611183345613
-      Water: 5254001833120114788
+      primitive_set_1 1_0: 6608392678669944811
+      primitive_set_1 1_1: 5047510655399246883
+      primitive_set_1 1_2: 5396804474248073843
+      primitive_set_1 1_3: -3542690869223780298
+      primitive_set_1 1_4: -6411788808232428665
+      primitive_set_1 1_5: -32419658002193685
+      primitive_set_1 1_6: -3114372879637162753
+      primitive_set_1 1_7: -6600392877469283904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

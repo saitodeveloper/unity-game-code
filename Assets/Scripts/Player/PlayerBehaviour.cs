@@ -9,11 +9,12 @@ public class PlayerBehaviour : MonoBehaviour
     public float sprintMultiplier = 2;
     public Vector3 target;
     private GameObject _targetGameObject = null;
-    private MonsterBehaviour _targetEnemy = null;
-    private ItemAbstractBehaviour _touchedObject = null;
+    private CombactableAbstractBehaviour _targetEnemy = null;
+    private ItemAbstractBehaviour _targetItem = null;
     private Animator _animator;
     private PlayerStateController _playerStateController = new PlayerStateController();
     public List<Item> _items;
+    private float _limitDistance = 3f;
 
     private void Awake()
     {
@@ -23,61 +24,102 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0) || Input.GetMouseButton(0))
-        {
+        this.CaptureClick();
+        this.CaptureCommands();
+        this.UpdatePlayerActions();
+        this.AnimationPhase();
+        this.BroadcastInfo();
+    }
 
+    void FixedUpdate()
+    {
+        var totalSpeed = (_playerStateController.IsAccelerating ? sprintMultiplier : 1) * speed;
+
+        if (_playerStateController.IsMoving)
+        {
+            transform.position = Vector3.MoveTowards(
+                transform.position, target, totalSpeed * Time.deltaTime
+            );
+        }
+    }
+
+    private void CaptureClick()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
             _targetGameObject = hit.collider?.gameObject;
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            target = mousePos;
             target.z = transform.position.z;
 
-            if (_targetGameObject != null)
-            {
-                _playerStateController.CollectingItemClicked = _targetGameObject.CompareTag("NatureCollectable");
-                _playerStateController.EnemyClicked = _targetGameObject.CompareTag("Enemy");
-            }
-            else
-            {
-                _playerStateController.CollectingItemClicked = false;
-                _playerStateController.EnemyClicked = false;
-            }
-        }
-
-        if (!_playerStateController.EnemyClicked & _targetGameObject == null && _targetEnemy != null)
-        {
-            _targetEnemy?.OnReleaseObject();
-        }
-
-        if (_targetGameObject != null && _targetGameObject.gameObject.CompareTag("Enemy"))
-        {
-            _targetEnemy = _targetGameObject.gameObject.GetComponent<MonsterBehaviour>();
-            _targetEnemy?.OnForceStop();
-        }
-
-        if (_targetGameObject != null && _targetGameObject.gameObject.CompareTag("NatureCollectable"))
-        {
-            _touchedObject = _targetGameObject.gameObject.GetComponent<BushBehaviour>();
+            if (_targetGameObject != null) Debug.Log("Target Object clicked");
         }
 
         if (_targetGameObject != null)
         {
-            Collider2D enemyCollider = _targetGameObject.GetComponent<Collider2D>();
-            float targetRadius = enemyCollider.bounds.size.x / 2f;
+            if (_targetGameObject.CompareTag("Enemy"))
+            {
+                _targetEnemy = _targetGameObject.GetComponent<CombactableAbstractBehaviour>();
+                _limitDistance = 5f;
+
+                _targetEnemy?.OnForceStop();
+                _targetEnemy?.OnCombatStart();
+            }
+            if (_targetGameObject.CompareTag("NatureCollectable"))
+            {
+                _targetItem = _targetGameObject.GetComponent<ItemAbstractBehaviour>();
+                _limitDistance = 2.5f;
+            }
+        }
+        else
+        {
+            if (_targetEnemy != null)
+            {
+                _targetEnemy.OnReleaseObject();
+            }
+            _targetEnemy = null;
+            _targetItem = null;
+        }
+
+        if (_targetGameObject == null && Input.GetMouseButton(0))
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+            _targetGameObject = hit.collider?.gameObject;
+            target = mousePos;
+            target.z = transform.position.z;
+        }
+    }
+
+    private void CaptureCommands()
+    {
+        _playerStateController.IsAccelerating = Input.GetAxis("Fire3") > 0;
+    }
+
+    private void UpdatePlayerActions()
+    {
+        if (_targetGameObject != null)
+        {
             _playerStateController.PlayerTargetDistance = Vector3.Distance(
                 transform.position, _targetGameObject.transform.position
-            ) - targetRadius;
+            );
         }
 
         _playerStateController.ForceStop =
-            _targetGameObject != null &&
-            _playerStateController.PlayerTargetDistance <= 2f;
+            (_targetEnemy != null || _targetItem != null) &&
+            _playerStateController.PlayerTargetDistance <= _limitDistance;
 
-        _playerStateController.IsAccelerating = Input.GetAxis("Fire3") > 0;
+        _playerStateController.IsEnemyChallenged =
+            _targetEnemy != null &&
+            _playerStateController.PlayerTargetDistance <= _limitDistance;
+
         _playerStateController.IsMoving =
-            transform.position != target &&
-            !_playerStateController.ForceStop;
+            transform.position != target && !_playerStateController.ForceStop;
+    }
 
+    private void AnimationPhase()
+    {
         Vector3 scale = transform.localScale;
         string direction = CompassIndicator.WalkingDirection(transform.position, target);
         bool toFaceRight = CompassIndicator.FaceRight(direction);
@@ -92,7 +134,6 @@ public class PlayerBehaviour : MonoBehaviour
         }
 
         transform.localScale = scale;
-        var state = _animator.GetCurrentAnimatorStateInfo(0);
 
         if (_playerStateController.IsMoving)
         {
@@ -105,33 +146,36 @@ public class PlayerBehaviour : MonoBehaviour
         {
             _animator.SetBool("isWalking", false);
             _animator.SetBool("isRunning", false);
-            _animator.SetBool("isAttacking", _playerStateController.IsAttacking);
-            _animator.SetBool("isCollecting",
-                _playerStateController.CollectingItemClicked &&
-                _touchedObject.Item.Quanity > 0
+            _animator.SetBool("isAttacking",
+                _targetEnemy != null &&
+                _playerStateController.IsEnemyChallenged
             );
-        }
-
-        if (state.IsName("Collecting") && state.normalizedTime >= 1f)
-        {
-            if (_touchedObject != null && _touchedObject.Item.Quanity > 0)
-            {
-                _touchedObject.OnInteractionFinished(_items);
-                _touchedObject = null;
-            }
-            _playerStateController.CollectingItemClicked = false;
+            _animator.SetBool("isCollecting",
+                _targetItem != null &&
+                _targetItem.Item.Quanity > 0
+            );
         }
     }
 
-    void FixedUpdate()
+    private void BroadcastInfo()
     {
-        var totalSpeed = (_playerStateController.IsAccelerating ? sprintMultiplier : 1) * speed;
+        var state = _animator.GetCurrentAnimatorStateInfo(0);
 
-        if (_playerStateController.IsMoving)
+        if (state.IsName("Collecting") && state.normalizedTime >= 1f)
         {
-            transform.position = Vector3.MoveTowards(
-                transform.position, target, totalSpeed * Time.deltaTime
-            );
+            if (_targetItem != null && _targetItem.Item.Quanity > 0)
+            {
+                _targetItem.OnInteractionFinished(_items);
+                _targetItem = null;
+            }
+        }
+
+        if (state.IsName("Explorer Attack 1") && state.normalizedTime >= 1f)
+        {
+            if (_targetEnemy != null)
+            {
+                _targetEnemy.OnCambatInteraction();
+            }
         }
     }
 }

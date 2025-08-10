@@ -1,12 +1,11 @@
 public class PlayerStateController
 {
     private bool _isAccelerating = false;
-    private bool _isAttacking = false;
+    private bool _isEnemyChallenged = false;
     private bool _isMoving = false;
     private bool _hasCollided = false;
     private bool _forceStop = false;
     private bool _collectingItemClicked = false;
-    private bool _enemyClicked = false;
     private float _playerTargetDistance = float.MaxValue;
 
     public bool IsAccelerating
@@ -15,10 +14,10 @@ public class PlayerStateController
         set { _isAccelerating = value; }
     }
 
-    public bool IsAttacking
+    public bool IsEnemyChallenged
     {
-        get { return _isAttacking; }
-        set { _isAttacking = value; }
+        get { return _isEnemyChallenged; }
+        set { _isEnemyChallenged = value; }
     }
 
     public bool IsMoving
@@ -49,11 +48,5 @@ public class PlayerStateController
     {
         get { return _playerTargetDistance; }
         set { _playerTargetDistance = value; }
-    }
-
-    public bool EnemyClicked
-    {
-        get { return _enemyClicked; }
-        set { _enemyClicked = value; }
     }
 }

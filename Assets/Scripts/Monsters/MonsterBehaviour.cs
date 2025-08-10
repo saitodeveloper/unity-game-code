@@ -72,12 +72,12 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
 
     public override void OnCombatStart()
     {
-
+        this._animator.SetBool("isFighting", true);
     }
 
     public override void OnCambatInteraction()
     {
-
+        this._animator.SetBool("inPain", true);
     }
 
     public override void OnCombatFinished()
