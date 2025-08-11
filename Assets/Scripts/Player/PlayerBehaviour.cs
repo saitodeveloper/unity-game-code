@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    public static Action HitAction;
+    public static Action<PlayerBehaviour> HitAction;
     public float speed = 8;
     public float sprintMultiplier = 2;
     public Vector3 target;
@@ -16,12 +15,14 @@ public class PlayerBehaviour : MonoBehaviour
     private PlayerStateController _playerStateController = new PlayerStateController();
     public List<Item> _items;
     private float _limitDistance = 3f;
-    private float _attackRestTimer = 5f;
+    private float _attackRestTimer;
+    private float _attackRest = 2f;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _items = new List<Item>();
+        _attackRestTimer = _attackRest;
     }
 
     void Update()
@@ -51,7 +52,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (_attackRestTimer <= 0f)
         {
             _playerStateController.AttackEnabled = true;
-            _attackRestTimer = 5f;
+            _attackRestTimer = _attackRest;
         }
         if (_attackRestTimer >= 0f)
         {
@@ -185,7 +186,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (_playerStateController.AttackEnabled)
         {
-            HitAction?.Invoke();
+            HitAction?.Invoke(this);
         }
     }
 

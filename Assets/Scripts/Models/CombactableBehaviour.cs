@@ -4,7 +4,6 @@ public abstract class CombactableAbstractBehaviour : MonoBehaviour
 {
 
     public abstract void OnCombatStart();
-    public abstract void OnCambatInteraction();
     public abstract void OnCombatPause();
     public abstract void OnCombatFinished();
     public abstract void OnForceStop();

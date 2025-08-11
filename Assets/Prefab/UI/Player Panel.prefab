@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 990172246771559595}
   - component: {fileID: 5249496584768654125}
   m_Layer: 5
-  m_Name: GUI Character
+  m_Name: Player Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

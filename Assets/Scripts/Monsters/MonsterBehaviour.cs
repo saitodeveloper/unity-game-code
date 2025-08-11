@@ -5,12 +5,15 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
 {
     private Animator _animator;
     public Vector3 targetDirection;
-    public float waitingTime = 5.0f;
+    public GameObject DamagePrefab;
+    public float WalkingWaitingTime = 5.0f;
+    public float ForgiveTime = 5.0f;
     public bool isTimerFlagged = true;
     public bool ForceStop = false;
     public string direction;
     private Vector3 _instantPosition;
     private bool _isWalking = false;
+    public PlayerBehaviour Revenge;
 
     void OnEnable()
     {
@@ -28,8 +31,23 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
         this.targetDirection = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
+    void CalculateForgetTime()
+    {
+        if (ForgiveTime <= 0f && Revenge != null)
+        {
+            Revenge = null;
+            this._animator.SetBool("isFighting", false);
+            ForgiveTime = 5f;
+        }
+        if (ForgiveTime >= 0f && Revenge != null)
+        {
+            ForgiveTime -= Time.deltaTime * 1.0f;
+        }
+    }
+
     void Update()
     {
+        CalculateForgetTime();
         if (ForceStop)
         {
             _isWalking = false;
@@ -37,7 +55,7 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
             return;
         }
 
-        if (isTimerFlagged && waitingTime <= 0f)
+        if (isTimerFlagged && WalkingWaitingTime <= 0f && Revenge == null)
         {
             float[] directions = {
                 this.transform.position.x + UnityEngine.Random .Range(-10f, 10f),
@@ -45,11 +63,15 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
                 transform.position.z
             };
             this.targetDirection = new Vector3(directions[0], directions[1], directions[2]);
-            this.waitingTime = 5.0f;
+            this.WalkingWaitingTime = 5.0f;
         }
-        else if (isTimerFlagged && waitingTime > 0f)
+        else if (isTimerFlagged && WalkingWaitingTime > 0f && Revenge == null)
         {
-            waitingTime -= Time.deltaTime * 1.0f;
+            WalkingWaitingTime -= Time.deltaTime * 1.0f;
+        }
+        else if (Revenge != null)
+        {
+            this.targetDirection = Revenge.gameObject.transform.position;
         }
 
         _isWalking = transform.position != targetDirection;
@@ -82,7 +104,7 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
     {
         if (_isWalking)
         {
-            _instantPosition = Vector3.MoveTowards(this.transform.position, this.targetDirection, Time.fixedDeltaTime * 8f);
+            _instantPosition = Vector3.MoveTowards(this.transform.position, this.targetDirection, Time.fixedDeltaTime * 6f);
             this.transform.position = _instantPosition;
         }
     }
@@ -92,9 +114,13 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
         this._animator.SetBool("isFighting", true);
     }
 
-    public override void OnCambatInteraction()
+    public void OnCambatInteraction(PlayerBehaviour attacker)
     {
         this._animator.SetBool("inPain", true);
+        var obj = Instantiate(DamagePrefab, transform.position, Quaternion.identity);
+        var message = obj.GetComponent<DamagePopUpBehaviour>();
+        message.SetText("20");
+        Revenge = attacker;
     }
 
     public void StopInPain()
@@ -104,7 +130,7 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
 
     public override void OnCombatFinished()
     {
-
+        this._animator.SetBool("isFighting", false);
     }
 
     public override void OnForceStop()
@@ -119,7 +145,7 @@ public class MonsterBehaviour : CombactableAbstractBehaviour
 
     public override void OnCombatPause()
     {
-
+        this._animator.SetBool("isFighting", false);
     }
 
     public override bool IsEnemyAlive()

@@ -7,7 +7,7 @@ public class PlayerStateController
     private bool _forceStop = false;
     private bool _collectingItemClicked = false;
     private float _playerTargetDistance = float.MaxValue;
-    private bool _attackEnabled = true;
+    private bool _attackEnabled = false;
 
     public bool IsAccelerating
     {
