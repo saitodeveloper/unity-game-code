@@ -1,155 +1,202 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterBehaviour : CombactableAbstractBehaviour
+public class MonsterBehaviour : MonoBehaviour
 {
-    private Animator _animator;
+    private Action<MonsterBehaviour> _hitAction;
+    private List<Guid> _hitAcctionList = new List<Guid>();
     public Vector3 targetDirection;
-    public GameObject DamagePrefab;
-    public float WalkingWaitingTime = 5.0f;
-    public float ForgiveTime = 5.0f;
-    public bool isTimerFlagged = true;
-    public bool ForceStop = false;
-    public string direction;
-    private Vector3 _instantPosition;
-    private bool _isWalking = false;
+    public float attackRest = 3f;
+    public float walkingRest = 5f;
+    public float forgetRevengeRest = 5f;
+    private Animator _animator;
     public PlayerBehaviour Revenge;
-
-    void OnEnable()
-    {
-        PlayerBehaviour.HitAction += OnCambatInteraction;
-    }
-
-    private void OnDisable()
-    {
-        PlayerBehaviour.HitAction -= OnCambatInteraction;
-    }
+    public float _attackRestTimer;
+    public float _walkingRestTimer;
+    public float _forgetRevengeRestTimer;
+    private PlayerStateController _playerStateController = new PlayerStateController();
+    private float _limitDistance = 0f;
+    private Guid _guid = Guid.NewGuid();
+    public GameObject DamagePrefab;
+    public bool InvertOnFaceRight = false;
 
     void Start()
     {
         this._animator = GetComponent<Animator>();
         this.targetDirection = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-    }
-
-    void CalculateForgetTime()
-    {
-        if (ForgiveTime <= 0f && Revenge != null)
-        {
-            Revenge = null;
-            this._animator.SetBool("isFighting", false);
-            ForgiveTime = 5f;
-        }
-        if (ForgiveTime >= 0f && Revenge != null)
-        {
-            ForgiveTime -= Time.deltaTime * 1.0f;
-        }
+        _attackRestTimer = attackRest;
+        _walkingRestTimer = walkingRest;
     }
 
     void Update()
     {
-        CalculateForgetTime();
-        if (ForceStop)
-        {
-            _isWalking = false;
-            this._animator?.SetBool("isWalking", false);
-            return;
-        }
-
-        if (isTimerFlagged && WalkingWaitingTime <= 0f && Revenge == null)
-        {
-            float[] directions = {
-                this.transform.position.x + UnityEngine.Random .Range(-10f, 10f),
-                this.transform.position.y + UnityEngine.Random.Range(-10f, 10f),
-                transform.position.z
-            };
-            this.targetDirection = new Vector3(directions[0], directions[1], directions[2]);
-            this.WalkingWaitingTime = 5.0f;
-        }
-        else if (isTimerFlagged && WalkingWaitingTime > 0f && Revenge == null)
-        {
-            WalkingWaitingTime -= Time.deltaTime * 1.0f;
-        }
-        else if (Revenge != null)
-        {
-            this.targetDirection = Revenge.gameObject.transform.position;
-        }
-
-        _isWalking = transform.position != targetDirection;
-        this.direction = CompassIndicator.WalkingDirection(_instantPosition, targetDirection);
-
-        bool toFaceRight = CompassIndicator.FaceRight(this.direction);
-        Vector3 scale = transform.localScale;
-
-        if (toFaceRight)
-        {
-            scale.x = Math.Abs(scale.x);
-        }
-        else if (direction != "STOP")
-        {
-            scale.x = -Math.Abs(scale.x);
-        }
-        transform.localScale = scale;
-
-        this._animator?.SetBool("isWalking", _isWalking);
-
-        var state = _animator.GetCurrentAnimatorStateInfo(0);
-
-        if (state.IsName("InPain") && state.normalizedTime >= 1f)
-        {
-            this._animator.SetBool("inPain", false);
-        }
+        this.CalculateTimers();
+        this.UpdateMonsterState();
+        this.UpdateNextMovent();
+        this.AnimationPhase();
     }
 
     void FixedUpdate()
     {
-        if (_isWalking)
+        if (_playerStateController.IsMoving)
         {
-            _instantPosition = Vector3.MoveTowards(this.transform.position, this.targetDirection, Time.fixedDeltaTime * 6f);
-            this.transform.position = _instantPosition;
+            this.transform.position = Vector3.MoveTowards(this.transform.position, this.targetDirection, Time.fixedDeltaTime * 8f);
         }
     }
 
-    public override void OnCombatStart()
+    private void CalculateTimers()
     {
-        this._animator.SetBool("isFighting", true);
+        if (_attackRestTimer <= 0f)
+        {
+            _playerStateController.AttackEnabled = true;
+            _attackRestTimer = attackRest;
+        }
+        if (_attackRestTimer > 0f)
+        {
+            _attackRestTimer -= Time.deltaTime * 1.0f;
+        }
+
+        if (_walkingRestTimer <= 0f)
+        {
+            _walkingRestTimer = walkingRest;
+        }
+        if (_walkingRestTimer > 0f)
+        {
+            _walkingRestTimer -= Time.deltaTime * 1.0f;
+        }
+
+        if (_forgetRevengeRestTimer <= 0f)
+        {
+            _forgetRevengeRestTimer = forgetRevengeRest;
+        }
+        if (_forgetRevengeRestTimer > 0f && _playerStateController.EnemyDistance >= 20f)
+        {
+            _forgetRevengeRestTimer -= Time.deltaTime * 1.0f;
+        }
     }
 
-    public void OnCambatInteraction(PlayerBehaviour attacker)
+    private void UpdateMonsterState()
     {
-        this._animator.SetBool("inPain", true);
+        var distance = Revenge != null ?
+            Vector3.Distance(transform.position, Revenge.transform.position) : float.MaxValue;
+
+        _playerStateController.ForceStop = _playerStateController.IsEnemyChallenged || (distance <= _limitDistance);
+        _playerStateController.IsMoving = (transform.position != this.targetDirection) && !_playerStateController.ForceStop;
+        _playerStateController.EnemyDistance = Revenge != null ? distance : null;
+
+        Revenge = _forgetRevengeRestTimer <= 0f ? null : Revenge;
+    }
+
+    private void UpdateNextMovent()
+    {
+        if (_walkingRestTimer <= 0f && Revenge == null)
+        {
+            float[] directions = {
+                this.transform.position.x + UnityEngine.Random .Range(-10f, 10f),
+                this.transform.position.y + UnityEngine.Random.Range(-10f, 10f),
+                this.transform.position.z
+            };
+            _limitDistance = 0f;
+            this.targetDirection = new Vector3(directions[0], directions[1], directions[2]);
+        }
+        else if (Revenge != null)
+        {
+            _limitDistance = 5f;
+            this.targetDirection = Revenge.transform.position;
+        }
+    }
+
+    public void SetChallenge(bool isEnemyChallenge, PlayerBehaviour enemy)
+    {
+        _playerStateController.IsEnemyChallenged = isEnemyChallenge;
+
+        if (isEnemyChallenge)
+        {
+            Revenge = enemy;
+            Revenge.RegisterOnHitAction(_guid, OnHitAction);
+        }
+    }
+
+    private void AnimationPhase()
+    {
+        var direction = CompassIndicator.WalkingDirection(transform.position, this.targetDirection);
+        bool toFaceRight = CompassIndicator.FaceRight(direction);
+        Vector3 scale = transform.localScale;
+
+        if (toFaceRight)
+        {
+            scale.x = (InvertOnFaceRight ? -1 : 1) * Math.Abs(scale.x);
+        }
+        else if (direction != "STOP")
+        {
+            scale.x = (InvertOnFaceRight ? 1 : -1) * Math.Abs(scale.x);
+        }
+
+        transform.localScale = scale;
+
+        this._animator?.SetBool("isWalking", _playerStateController.IsMoving && !_playerStateController.ForceStop);
+        this._animator?.SetBool("isFighting", _playerStateController.IsEnemyChallenged || Revenge != null);
+        this._animator?.SetBool("inPain", _playerStateController.InPain);
+        this._animator?.SetBool("isAttacking",
+            !_playerStateController.InPain &&
+            !_playerStateController.IsMoving &&
+            _playerStateController.AttackEnabled
+        );
+    }
+
+    public void OnHitAction(PlayerBehaviour enemy)
+    {
+        _playerStateController.InPain = true;
+        Revenge = enemy;
         var obj = Instantiate(DamagePrefab, transform.position, Quaternion.identity);
         var message = obj.GetComponent<DamagePopUpBehaviour>();
         message.SetText("20");
-        Revenge = attacker;
     }
 
     public void StopInPain()
     {
-        this._animator.SetBool("inPain", false);
+        _playerStateController.InPain = false;
     }
 
-    public override void OnCombatFinished()
+    public void OnHitEvent()
     {
-        this._animator.SetBool("isFighting", false);
+        if (_playerStateController.AttackEnabled)
+        {
+            _hitAction?.Invoke(this);
+        }
     }
 
-    public override void OnForceStop()
+    public void OnAttackEnd()
     {
-        ForceStop = true;
+        _playerStateController.AttackEnabled = false;
     }
 
-    public override void OnReleaseObject()
+    public void OnAttackStart()
     {
-        ForceStop = false;
+        this.transform.position = Revenge.transform.position - new Vector3(2f, 0, 0);
     }
 
-    public override void OnCombatPause()
+    public void RegisterOnHitAction(Guid guid, Action<MonsterBehaviour> action)
     {
-        this._animator.SetBool("isFighting", false);
+        if (!CheckOnHitAction(guid))
+        {
+            _hitAcctionList.Add(guid);
+            _hitAction += action;
+        }
     }
 
-    public override bool IsEnemyAlive()
+    public void RemoveOnHitAction(Guid guid, Action<MonsterBehaviour> action)
     {
-        return true;
+        if (CheckOnHitAction(guid))
+        {
+            _hitAcctionList.Remove(guid);
+            _hitAction -= action;
+        }
+    }
+
+    public bool CheckOnHitAction(Guid guid)
+    {
+        return _hitAcctionList.Contains(guid);
     }
 }

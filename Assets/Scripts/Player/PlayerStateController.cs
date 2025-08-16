@@ -6,8 +6,10 @@ public class PlayerStateController
     private bool _hasCollided = false;
     private bool _forceStop = false;
     private bool _collectingItemClicked = false;
-    private float _playerTargetDistance = float.MaxValue;
+    private float? _playerTargetDistance = null;
+    private float? _enemyDistance = null;
     private bool _attackEnabled = false;
+    private bool _inPain = false;
 
     public bool IsAccelerating
     {
@@ -45,15 +47,27 @@ public class PlayerStateController
         set { _collectingItemClicked = value; }
     }
 
-    public float PlayerTargetDistance
+    public float? PlayerTargetDistance
     {
         get { return _playerTargetDistance; }
         set { _playerTargetDistance = value; }
+    }
+
+    public float? EnemyDistance
+    {
+        get { return _enemyDistance; }
+        set { _enemyDistance = value; }
     }
 
     public bool AttackEnabled
     {
         get { return _attackEnabled; }
         set { _attackEnabled = value; }
+    }
+
+    public bool InPain
+    {
+        get { return _inPain; }
+        set { _inPain = value; }
     }
 }

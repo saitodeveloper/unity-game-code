@@ -343,10 +343,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetDirection: {x: 0, y: 0, z: 0}
-  waitingTime: 5
-  isTimerFlagged: 1
-  ForceStop: 0
-  direction: 
+  attackRest: 3
+  walkingRest: 5
+  forgetRevengeRest: 5
+  Revenge: {fileID: 0}
+  _attackRestTimer: 0
+  _walkingRestTimer: 0
+  _forgetRevengeRestTimer: 0
+  DamagePrefab: {fileID: 9081741273924462990, guid: 9d2c07ef6e427c54cb5012257b661089, type: 3}
+  InvertOnFaceRight: 1
 --- !u!1 &7392565285694233356
 GameObject:
   m_ObjectHideFlags: 0

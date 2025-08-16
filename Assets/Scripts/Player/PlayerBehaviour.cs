@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    public static Action<PlayerBehaviour> HitAction;
+    private Action<PlayerBehaviour> _hitAction;
+    private List<Guid> _hitAcctionList = new List<Guid>();
     public float speed = 8;
     public float sprintMultiplier = 2;
     public Vector3 target;
     private GameObject _targetGameObject = null;
-    private CombactableAbstractBehaviour _targetEnemy = null;
+    private MonsterBehaviour _targetEnemy = null;
     private ItemAbstractBehaviour _targetItem = null;
     private Animator _animator;
     private PlayerStateController _playerStateController = new PlayerStateController();
@@ -17,6 +18,8 @@ public class PlayerBehaviour : MonoBehaviour
     private float _limitDistance = 3f;
     private float _attackRestTimer;
     private float _attackRest = 2f;
+    public GameObject DamagePrefab;
+    private Guid _guid = Guid.NewGuid();
 
     private void Awake()
     {
@@ -69,19 +72,17 @@ public class PlayerBehaviour : MonoBehaviour
             _targetGameObject = hit.collider?.gameObject;
             target = mousePos;
             target.z = transform.position.z;
-
-            if (_targetGameObject != null) Debug.Log("Target Object clicked");
         }
 
         if (_targetGameObject != null)
         {
             if (_targetGameObject.CompareTag("Enemy"))
             {
-                _targetEnemy = _targetGameObject.GetComponent<CombactableAbstractBehaviour>();
+                _targetEnemy = _targetGameObject.GetComponent<MonsterBehaviour>();
                 _limitDistance = 5f;
 
-                _targetEnemy?.OnForceStop();
-                _targetEnemy?.OnCombatStart();
+                _targetEnemy?.SetChallenge(true, this);
+                _targetEnemy?.RegisterOnHitAction(_guid, OnHitAction);
             }
             if (_targetGameObject.CompareTag("NatureCollectable"))
             {
@@ -91,10 +92,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         else
         {
-            if (_targetEnemy != null)
-            {
-                _targetEnemy.OnReleaseObject();
-            }
+            _targetEnemy?.SetChallenge(false, this);
             _targetEnemy = null;
             _targetItem = null;
         }
@@ -164,15 +162,13 @@ public class PlayerBehaviour : MonoBehaviour
         {
             _animator.SetBool("isWalking", false);
             _animator.SetBool("isRunning", false);
+            _animator.SetBool("inPain", _playerStateController.InPain);
             _animator.SetBool("isFighting",
-                _targetEnemy != null &&
-                _targetEnemy.IsEnemyAlive() &&
                 _playerStateController.IsEnemyChallenged
             );
             if (_playerStateController.AttackEnabled)
                 _animator.SetBool("isAttacking",
                     _targetEnemy != null &&
-                    _targetEnemy.IsEnemyAlive() &&
                     _playerStateController.IsEnemyChallenged
                 );
             _animator.SetBool("isCollecting",
@@ -186,7 +182,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (_playerStateController.AttackEnabled)
         {
-            HitAction?.Invoke(this);
+            _hitAction?.Invoke(this);
         }
     }
 
@@ -208,5 +204,43 @@ public class PlayerBehaviour : MonoBehaviour
                 _targetItem = null;
             }
         }
+    }
+
+    public void OnHitAction(MonsterBehaviour enemy)
+    {
+        _playerStateController.InPain = true;
+        _playerStateController.ForceStop = true;
+        _playerStateController.IsEnemyChallenged = true;
+        var obj = Instantiate(DamagePrefab, transform.position, Quaternion.identity);
+        var message = obj.GetComponent<DamagePopUpBehaviour>();
+        message.SetText("20");
+    }
+
+    public void InPainStop()
+    {
+        _playerStateController.InPain = false;
+    }
+
+    public void RegisterOnHitAction(Guid guid, Action<PlayerBehaviour> action)
+    {
+        if (!CheckOnHitAction(guid))
+        {
+            _hitAcctionList.Add(guid);
+            _hitAction += action;
+        }
+    }
+
+    public void RemoveOnHitAction(Guid guid, Action<PlayerBehaviour> action)
+    {
+        if (CheckOnHitAction(guid))
+        {
+            _hitAcctionList.Remove(guid);
+            _hitAction -= action;
+        }
+    }
+
+    public bool CheckOnHitAction(Guid guid)
+    {
+        return _hitAcctionList.Contains(guid);
     }
 }
