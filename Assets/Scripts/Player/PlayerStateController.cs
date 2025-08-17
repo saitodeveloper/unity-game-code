@@ -10,6 +10,7 @@ public class PlayerStateController
     private float? _enemyDistance = null;
     private bool _attackEnabled = false;
     private bool _inPain = false;
+    private bool _isAlive = true;
 
     public bool IsAccelerating
     {
@@ -69,5 +70,11 @@ public class PlayerStateController
     {
         get { return _inPain; }
         set { _inPain = value; }
+    }
+
+        public bool IsAlive
+    {
+        get { return _isAlive; }
+        set { _isAlive = value; }
     }
 }

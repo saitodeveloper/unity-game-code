@@ -136,7 +136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.009949, y: 0.00017547607}
+  m_AnchoredPosition: {x: 10.009979, y: 0.00017547607}
   m_SizeDelta: {x: -123, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4645392892776016888
@@ -429,8 +429,9 @@ GameObject:
   - component: {fileID: 130262566032564796}
   - component: {fileID: 4671497362443499934}
   - component: {fileID: 5687986480848844146}
+  - component: {fileID: 6711003995169953075}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Health Bar Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -544,6 +545,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6711003995169953075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801081405960252829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2512897f5ac28c8478bff52536b384d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 5687986480848844146}
+  smoothSpeed: 5
 --- !u!1 &2791092737624771060
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,11 +590,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3719300796956701968}
-  m_Father: {fileID: 8685158173687224073}
+  m_Father: {fileID: 2140650014235378623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -172.12994, y: 45.300385}
+  m_AnchoredPosition: {x: -257.33093, y: 1.5003357}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &573307148911407475
@@ -630,7 +645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5900457600847512529}
   m_Layer: 5
-  m_Name: Mana
+  m_Name: Will
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -653,6 +668,7 @@ RectTransform:
   - {fileID: 7280005879976318663}
   - {fileID: 7985655513687091966}
   - {fileID: 3589750076708082867}
+  - {fileID: 4569989855535815897}
   m_Father: {fileID: 8685158173687224073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -823,7 +839,7 @@ GameObject:
   - component: {fileID: 2576501104707966404}
   - component: {fileID: 5679920659613302676}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Will Bar Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,6 +986,7 @@ RectTransform:
   - {fileID: 4928496930347249225}
   - {fileID: 4014157479868314334}
   - {fileID: 5604912013250667320}
+  - {fileID: 7219103641663593368}
   m_Father: {fileID: 8685158173687224073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1308,8 +1325,6 @@ RectTransform:
   - {fileID: 6325654033650181243}
   - {fileID: 2140650014235378623}
   - {fileID: 5900457600847512529}
-  - {fileID: 7219103641663593368}
-  - {fileID: 4569989855535815897}
   m_Father: {fileID: 744883208844084779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1423,11 +1438,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9003511598835181326}
-  m_Father: {fileID: 8685158173687224073}
+  m_Father: {fileID: 5900457600847512529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -172.12994, y: -44.8}
+  m_AnchoredPosition: {x: -257.33093, y: -0.20003891}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1032545548372041886

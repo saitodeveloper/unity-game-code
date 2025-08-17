@@ -15,11 +15,14 @@ public class MonsterBehaviour : MonoBehaviour
     public float _attackRestTimer;
     public float _walkingRestTimer;
     public float _forgetRevengeRestTimer;
-    private PlayerStateController _playerStateController = new PlayerStateController();
+    public PlayerStateController _playerStateController = new PlayerStateController();
     private float _limitDistance = 0f;
     private Guid _guid = Guid.NewGuid();
     public GameObject DamagePrefab;
+    public GameObject HealthBarPrefab;
     public bool InvertOnFaceRight = false;
+    public FighterStats FighterStats = new FighterStats(Stats.DefaultStatusType.BasicMonster);
+    private bool _isDeathTriggered = false;
 
     void Start()
     {
@@ -84,6 +87,10 @@ public class MonsterBehaviour : MonoBehaviour
         _playerStateController.ForceStop = _playerStateController.IsEnemyChallenged || (distance <= _limitDistance);
         _playerStateController.IsMoving = (transform.position != this.targetDirection) && !_playerStateController.ForceStop;
         _playerStateController.EnemyDistance = Revenge != null ? distance : null;
+        _playerStateController.IsAlive = FighterStats.GetAttrubuteStats(
+            FighterStats.StatusType.InstantBase,
+            FighterStats.StatusKey.Health
+        ) > 0;
 
         Revenge = _forgetRevengeRestTimer <= 0f ? null : Revenge;
     }
@@ -120,6 +127,15 @@ public class MonsterBehaviour : MonoBehaviour
 
     private void AnimationPhase()
     {
+        if (!_playerStateController.IsAlive && !_isDeathTriggered)
+        {
+            _isDeathTriggered = true;
+            _animator.SetTrigger("Die");
+            return;
+        }
+
+        if (_isDeathTriggered) return;
+
         var direction = CompassIndicator.WalkingDirection(transform.position, this.targetDirection);
         bool toFaceRight = CompassIndicator.FaceRight(direction);
         Vector3 scale = transform.localScale;
@@ -145,13 +161,17 @@ public class MonsterBehaviour : MonoBehaviour
         );
     }
 
-    public void OnHitAction(PlayerBehaviour enemy)
+    public void OnHitAction(PlayerBehaviour agressive)
     {
         _playerStateController.InPain = true;
-        Revenge = enemy;
+        Revenge = agressive;
+
+        var damageTaken = FightCordenator.OnTryAHit(agressive.FighterStats, FighterStats);
+
         var obj = Instantiate(DamagePrefab, transform.position, Quaternion.identity);
         var message = obj.GetComponent<DamagePopUpBehaviour>();
-        message.SetText("20");
+
+        message.SetText(damageTaken.ToString());
     }
 
     public void StopInPain()
@@ -198,5 +218,10 @@ public class MonsterBehaviour : MonoBehaviour
     public bool CheckOnHitAction(Guid guid)
     {
         return _hitAcctionList.Contains(guid);
+    }
+
+    public void onDeath()
+    {
+        Destroy(gameObject, 0f);
     }
 }

@@ -305,8 +305,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.71304417, y: 0.38218057}
-  m_Size: {x: 2.6939182, y: 3.6845982}
+  m_Offset: {x: 0.6784587, y: 0.3960147}
+  m_Size: {x: 2.2927275, y: 3.463251}
   m_Direction: 0
 --- !u!95 &887253519136502815
 Animator:

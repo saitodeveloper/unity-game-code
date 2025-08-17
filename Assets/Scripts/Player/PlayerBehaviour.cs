@@ -16,16 +16,30 @@ public class PlayerBehaviour : MonoBehaviour
     private PlayerStateController _playerStateController = new PlayerStateController();
     public List<Item> _items;
     private float _limitDistance = 3f;
-    private float _attackRestTimer;
-    private float _attackRest = 2f;
     public GameObject DamagePrefab;
+    public HealthBarBehaviour HealthBar;
     private Guid _guid = Guid.NewGuid();
+    public FighterStats FighterStats = new FighterStats(Stats.DefaultStatusType.Player);
+    public PlayerChronometer PlayerChronometer = new PlayerChronometer();
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _items = new List<Item>();
-        _attackRestTimer = _attackRest;
+        HealthBar.SetMaxHealth(
+            FighterStats.GetAttrubuteStats(
+                FighterStats.StatusType.Base,
+                FighterStats.StatusKey.Health
+            )
+        );
+        PlayerChronometer.RegisterChroometer(
+            PlayerChronometer.ChronometerType.AttackTimer,
+            2f
+        );
+        PlayerChronometer.RegisterChroometer(
+            PlayerChronometer.ChronometerType.HealthRecoveryTimer,
+            10f
+        );
     }
 
     void Update()
@@ -52,15 +66,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void CalculateTimers()
     {
-        if (_attackRestTimer <= 0f)
-        {
-            _playerStateController.AttackEnabled = true;
-            _attackRestTimer = _attackRest;
-        }
-        if (_attackRestTimer >= 0f)
-        {
-            _attackRestTimer -= Time.deltaTime * 1.0f;
-        }
+        PlayerChronometer.CalculateTimers(Time.deltaTime * 1f);
     }
 
     private void CaptureClick()
@@ -114,11 +120,20 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void UpdatePlayerActions()
     {
+        var instantAttackTimer = PlayerChronometer.GetInstantTimer(PlayerChronometer.ChronometerType.AttackTimer);
+        var instantHealthRecoveryTimer = PlayerChronometer.GetInstantTimer(PlayerChronometer.ChronometerType.HealthRecoveryTimer);
+
+        #region Update Player State
         if (_targetGameObject != null)
         {
             _playerStateController.PlayerTargetDistance = Vector3.Distance(
                 transform.position, _targetGameObject.transform.position
             );
+        }
+
+        if (instantAttackTimer <= 0f)
+        {
+            _playerStateController.AttackEnabled = true;
         }
 
         _playerStateController.ForceStop =
@@ -131,6 +146,41 @@ public class PlayerBehaviour : MonoBehaviour
 
         _playerStateController.IsMoving =
             transform.position != target && !_playerStateController.ForceStop;
+
+        #endregion
+
+        #region Update Player Base
+        if (instantHealthRecoveryTimer <= 0f)
+        {
+            var maxHealth = FighterStats.GetAttrubuteStats(
+                FighterStats.StatusType.Base,
+                FighterStats.StatusKey.Health
+            );
+
+            var instantHealth = FighterStats.GetAttrubuteStats(
+                FighterStats.StatusType.InstantBase,
+                FighterStats.StatusKey.Health
+            );
+
+            var healthRecoveryPercent = FighterStats.GetAttrubuteStats(
+                FighterStats.StatusType.Base,
+                FighterStats.StatusKey.HealthRecoveryPercent
+            );
+
+            var newValue = instantHealth + Mathf.CeilToInt(
+                maxHealth * (healthRecoveryPercent / 100f)
+            );
+            var result = newValue <= maxHealth ? newValue : maxHealth + 0;
+
+            FighterStats.SetAttrubuteStats(
+                FighterStats.StatusType.InstantBase,
+                FighterStats.StatusKey.Health,
+                result
+            );
+
+            UpdateHealthBar();
+        }
+        #endregion
     }
 
     private void AnimationPhase()
@@ -206,14 +256,30 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    public void OnHitAction(MonsterBehaviour enemy)
+    public void OnHitAction(MonsterBehaviour agressive)
     {
         _playerStateController.InPain = true;
         _playerStateController.ForceStop = true;
         _playerStateController.IsEnemyChallenged = true;
+
+        var damageTaken = FightCordenator.OnTryAHit(agressive.FighterStats, FighterStats);
+
         var obj = Instantiate(DamagePrefab, transform.position, Quaternion.identity);
         var message = obj.GetComponent<DamagePopUpBehaviour>();
-        message.SetText("20");
+
+        UpdateHealthBar();
+
+        message.SetText(damageTaken.ToString(), true);
+    }
+
+    public void UpdateHealthBar()
+    {
+        HealthBar.UpdateHealthBar(
+            FighterStats.GetAttrubuteStats(
+                FighterStats.StatusType.InstantBase,
+                FighterStats.StatusKey.Health
+            )
+        );
     }
 
     public void InPainStop()

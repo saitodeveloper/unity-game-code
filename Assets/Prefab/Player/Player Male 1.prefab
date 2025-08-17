@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 109
-  m_Sprite: {fileID: 670814536372784037, guid: 3669f48769af043488932c642ad3cbe3, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 2.16, y: 1.4333333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &781186046597750916
@@ -475,8 +475,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.17139387, y: 0.8645799}
-  m_Size: {x: 2.8709712, y: 5.7376914}
+  m_Offset: {x: -0.23020267, y: 0.72603124}
+  m_Size: {x: 1.6595092, y: 5.132656}
   m_Direction: 0
 --- !u!50 &3667793257500529875
 Rigidbody2D:
@@ -520,6 +520,8 @@ MonoBehaviour:
   speed: 8
   sprintMultiplier: 2
   target: {x: 0, y: 0, z: 0}
+  DamagePrefab: {fileID: 9081741273924462990, guid: 9d2c07ef6e427c54cb5012257b661089, type: 3}
+  HealthBar: {fileID: 0}
 --- !u!114 &7277584222899699719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,7 +634,7 @@ GameObject:
   - component: {fileID: 7818448222573674872}
   - component: {fileID: 2392778391523171838}
   m_Layer: 0
-  m_Name: Eye L
+  m_Name: Eye R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -697,7 +699,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 106
-  m_Sprite: {fileID: 5364231537217277328, guid: c7fc185c75f151042997734b4ec41673, type: 3}
+  m_Sprite: {fileID: -7537990289275609189, guid: c7fc185c75f151042997734b4ec41673, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -959,7 +961,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 107
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 631792942847576314, guid: c7fc185c75f151042997734b4ec41673, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -967,7 +969,7 @@ SpriteRenderer:
   m_Size: {x: 0.31333333, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5956447846088492337
@@ -1490,7 +1492,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 105
+  m_SortingOrder: 101
   m_Sprite: {fileID: 7232096986609900619, guid: 8ba7ae4c4f7ab524b9bfe3244950e805, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1578,7 +1580,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 115
-  m_Sprite: {fileID: -404869373198648143, guid: 3c83bb29a44f36b458503d03187bfcb4, type: 3}
+  m_Sprite: {fileID: -4591015990886545822, guid: 3c83bb29a44f36b458503d03187bfcb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
